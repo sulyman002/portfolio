@@ -10,6 +10,8 @@ const Nav = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const sliderRef = useRef(null);
+  const containerRef = useRef(null);
+  const indicatorRef = useRef(null);
   
 
   useEffect(() => {
@@ -19,7 +21,7 @@ const Nav = () => {
   q(".word").forEach((el) => {
     tl.fromTo(
       el,
-      { y: "100%", opacity: 0 }, // start below
+      { y: "100%", opacity: 0 }, 
       { y: "0%", opacity: 1, duration: .3 } 
     )
       .to(el, {
@@ -34,6 +36,8 @@ const Nav = () => {
       });
   });
 }, []);
+
+useEffect(() => {},[])
 
 useEffect(() => {
   const handleResize = () => {
@@ -118,10 +122,10 @@ const handleOpenNav = () => {
   }`}>
     {open && (
          <div className="mt-5">
-          <div className="flex items-center flex-col w-full text-[14.4px] gap-6">
+          <div className="flex items-center flex-col w-full text-[14.4px] gap-  6">
             {links.map((link) => (
                <Link 
-          key={link.path}
+           key={link.path}
           to={link.path}
           className={` py-[6px]  w-full flex items-center justify-center ${
             location.pathname === link.path ? " bg-gray-50/20 text-[#242736]" : ""

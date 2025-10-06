@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import gsap from "gsap";
+import ContactMe from "../components/ContactMe";
 
 const PortfolioLayout = () => {
   useEffect(() => {
@@ -26,7 +27,7 @@ const PortfolioLayout = () => {
         { scale: 0, opacity: 0 },
         { scale: 1, opacity: 1, duration: 1.2, ease: "back.out(1.7)" }
       )
-      // Text stroke → fill
+   
       .to(
         "#name",
         {
@@ -50,8 +51,7 @@ const PortfolioLayout = () => {
           strokeDasharray: "30% 0"
         })
        
-      
-      // Logo moves to corner
+     
       .to("#logo", {
         scale: 0.5,
         x: "-40vh",
@@ -59,31 +59,31 @@ const PortfolioLayout = () => {
         duration: 0.8,
         ease: "power2.inOut",
       })
-      // Loader bg fade
+      
       .to("#loader-bg", { backgroundColor: "#ffffff", duration: 1 }, "-=0.5")
-      // Show landing content
+      
       .set("#landing", { opacity: 1 })
-      // Animate hero text
+     
       .from(".hero-title", {
         y: 40,
         opacity: 0,
         duration: 0.6,
         stagger: 0.2,
       })
-      // Animate CTA
+    
       .from(".hero-cta", {
         y: 20,
         opacity: 0,
         duration: 0.5,
         stagger: 0.15,
       })
-      // Animate hero image
+     
       .from(".hero-img", {
         opacity: 0,
         scale: 0.95,
         duration: 0.6,
       })
-      // Finally hide loader so landing is visible
+     
       .to("#loader-bg", { autoAlpha: 0, display: "none", duration: 0.3 });
   }, []);
   return (
@@ -110,12 +110,7 @@ const PortfolioLayout = () => {
             {"</SULYMAN>"}
           </text>
         </svg>
-        {/* <div id="loader" className="flex flex-col items-center">
-         
-          <p id="name" className="mt-2 text-lg tracking-widest">
-            {"</Sulaiman Oyedele>"}
-          </p>
-        </div> */}
+       
       </div>
       <section
         id="landing"
@@ -126,7 +121,7 @@ const PortfolioLayout = () => {
 
       {/* Outlet */}
       <Outlet />
-
+    <ContactMe />
       {/* Footer section */}
       <Footer />
       </section>

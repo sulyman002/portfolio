@@ -9,7 +9,7 @@ import About from "./pages/About";
 const App = () => {
   
   return (
-    <div>
+    <div className="transition-all">
       <Routes>
         <Route path="/" element={<PortfolioLayout />}>
           <Route index element={<Home />} />
