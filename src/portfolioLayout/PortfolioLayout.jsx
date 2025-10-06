@@ -119,21 +119,9 @@ const PortfolioLayout = () => {
       </div>
       <section
         id="landing"
-        className="opacity-0 flex flex-col items-center justify-center min-h-screen bg-white text-[#0D1C2E]"
+        className="opacity-0 text-[#0D1C2E]"
       >
-        <h1 className="hero-title text-4xl font-bold">Hi, I’m Sulaiman</h1>
-        <h2 className="hero-title text-xl mt-2">Frontend Developer</h2>
-        <div className="flex gap-4 mt-6">
-          <button className="hero-cta px-6 py-2 bg-[#0D1C2E] text-white rounded-lg">
-            View Projects
-          </button>
-          <button className="hero-cta px-6 py-2 border border-[#0D1C2E] rounded-lg">
-            Contact Me
-          </button>
-        </div>
-        <div className="hero-img mt-10 w-40 h-40 rounded-full bg-gray-300"></div>
-      </section>
-      {/* nav section */}
+        {/* nav section */}
       <Nav />
 
       {/* Outlet */}
@@ -141,6 +129,8 @@ const PortfolioLayout = () => {
 
       {/* Footer section */}
       <Footer />
+      </section>
+      
     </div>
   );
 };
