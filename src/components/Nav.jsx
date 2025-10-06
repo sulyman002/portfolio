@@ -8,10 +8,9 @@ import { useLocation } from 'react-router-dom';
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
-  
   const location = useLocation();
-  
   const sliderRef = useRef(null);
+  
 
   useEffect(() => {
   const q = gsap.utils.selector(sliderRef);
@@ -34,6 +33,18 @@ const Nav = () => {
         duration: .3,
       });
   });
+}, []);
+
+useEffect(() => {
+  const handleResize = () => {
+    if (window.innerWidth >= 1024) {
+      setOpen(false);
+    }
+  };
+
+  window.addEventListener("resize", handleResize);
+
+  return () => window.removeEventListener("resize", handleResize);
 }, []);
 
 const handleOpenNav = () => {
@@ -96,7 +107,39 @@ const handleOpenNav = () => {
           
          </button>
         </div>
+        {/* mobile nav */}
       </div>
+
+      <div
+  className={`overflow-hidden transition-all duration-300  ${
+    open
+      ? "max-h-[400px] opacity-100 translate-y-0 ease-[cubic-bezier(0.22,1,0.36,1)]"
+      : "max-h-0 opacity-0 -translate-y-3 ease-in delay-[150ms]"
+  }`}>
+    {open && (
+         <div className="mt-5">
+          <div className="flex items-center flex-col w-full text-[14.4px] gap-6">
+            {links.map((link) => (
+               <Link 
+          key={link.path}
+          to={link.path}
+          className={` py-[6px]  w-full flex items-center justify-center ${
+            location.pathname === link.path ? " bg-gray-50/20 text-[#242736]" : ""
+          }`}
+        >
+          {link.label}
+        </Link>
+            ))}
+            
+           
+          </div>
+         </div>
+      )}
+      <div className="z-1 text-[#ec5c29] bg-transparent mt-5 border border-[#cecece] rounded-[8px] transition-all duration-500 py-[8px] px-[18px] cursor-pointer text-center text-[15.52px] leading-[24px] font-400 font-medium ">
+            Let's chat
+          </div>
+  </div>
+      
       </div>
     </div>
   )
