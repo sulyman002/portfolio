@@ -4,7 +4,7 @@ import gsap from 'gsap';
 
 const Nav = () => {
 
-  const words = ["Frontend", "Backend", "Fullstack", "Designer", "Developer"];
+  const words = ["Creative Thinker","Frontend developer" , "Problem Solver", "Team Player", "Tech Enthusiast", "Innovation Driven"];
   const sliderRef = useRef(null);
 
   useEffect(() => {
@@ -34,14 +34,14 @@ const Nav = () => {
 
   return (
     <div className='shadow'>
-      <div className="mx-auto container px-6 lg:px-0 md:py-6 py-4  ">
+      <div className="mx-auto container px-6 lg:px-0 md:py-6 py-3  ">
         <div className="flex items-center justify-between ">
         {/* logo here */}
         <div className='flex items-start flex-col gap-[2px]'>
           <p className="md:text-[17px] text-[14px] font-500 font-semibold text-[#242736] ">Oyedele Sulaiman</p>
          <div
         ref={sliderRef}
-        className="overflow-hidden  h-[25px] w-full tex-[12px] text-[#A1A09F] flex items-center font-200 relative"
+        className="overflow-hidden  h-[25px] w-full md:tex-[14px] text-[12px] text-[#A1A09F] flex items-center font-200 relative"
       >
         {words.map((word, index) => (
           <div key={index} className="word absolute w-full">
