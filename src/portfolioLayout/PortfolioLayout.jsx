@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Outlet } from "react-router-dom";
-import Nav from "../pages/Nav";
-import Footer from "../pages/Footer";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 import gsap from "gsap";
 
 const PortfolioLayout = () => {
