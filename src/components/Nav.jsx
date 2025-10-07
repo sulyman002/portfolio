@@ -10,8 +10,8 @@ const Nav = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const sliderRef = useRef(null);
-  const containerRef = useRef(null);
-  const indicatorRef = useRef(null);
+  // const containerRef = useRef(null);
+  // const indicatorRef = useRef(null);
   
 
   useEffect(() => {

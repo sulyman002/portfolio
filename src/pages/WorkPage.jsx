@@ -1,12 +1,12 @@
 import React from 'react'
 import Work from '../components/Work'
 
-const Home = () => {
+const WorkPage = () => {
   return (
     <div>
-      <Work limit={6} />
+      <Work />
     </div>
   )
 }
 
-export default Home
+export default WorkPage;

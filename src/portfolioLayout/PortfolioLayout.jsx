@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import gsap from "gsap";
 import ContactMe from "../components/ContactMe";
 
+
 const PortfolioLayout = () => {
   useEffect(() => {
     const visited = localStorage.getItem("visited");
@@ -121,6 +122,7 @@ const PortfolioLayout = () => {
 
       {/* Outlet */}
       <Outlet />
+     
     <ContactMe />
       {/* Footer section */}
       <Footer />
