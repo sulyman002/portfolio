@@ -11,11 +11,11 @@ const Work = ({limit}) => {
   const productToDisplay = limit ? projects.slice(0, limit) : projects;
 
   return (
-    <div className="mx-auto container px-6 md:px-0">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+    <div className="mx-auto container">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div>
           <div className="relative">
-            <h2 className="text-[#242736] text-[20px] md:text-[26.8px] lg:text-[32px] font-600 font-bold tracking-wider font-['Space_Grotesk']">
+            <h2 className="text-[#242736] text-[24px] md:text-[26.8px] lg:text-[32px] font-600 font-bold tracking-wider font-['Space_Grotesk']">
               <span className="block ml-[120px]">A small showcase</span>
               <span className="block">of what I've worked on.</span>
             </h2>

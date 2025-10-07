@@ -10,6 +10,7 @@ import project8 from  "../assets/project8.png";
 export const words = [
   "Creative Thinker",
   "Frontend developer",
+  "Mobile Application Developer",
   "Problem Solver",
   "Team Player",
   "Tech Enthusiast",
