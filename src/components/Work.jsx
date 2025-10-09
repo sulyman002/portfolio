@@ -38,7 +38,7 @@ const Work = ({limit}) => {
               navigate(`/work/${project.id}`, {state: { background: location }});
             }}
             key={index}
-            className="relative w-full aspect-[16/9] hover:scale-101 shadow hover:shadow-xl cursor-pointer transition-all "
+            className="relative w-full aspect-[16/9] h hover:scale-101 shadow-md hover:shadow-xl cursor-pointer transition-all duration-700 "
           >
             <svg
               viewBox="0 0 1440 820"

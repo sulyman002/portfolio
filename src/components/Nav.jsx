@@ -124,7 +124,7 @@ const handleOpenNav = () => {
          <div className="mt-5">
           <div className="flex items-center flex-col w-full text-[14.4px] gap-  6">
             {links.map((link) => (
-               <Link 
+               <Link onClick={() => setOpen(false)}
            key={link.path}
           to={link.path}
           className={` py-[6px]  w-full flex items-center justify-center ${
