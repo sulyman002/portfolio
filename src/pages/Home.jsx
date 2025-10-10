@@ -1,6 +1,11 @@
 import React from 'react'
 import Work from '../components/Work'
 import myImage from "../assets/myImage2.jpg";
+// import Experience from '../components/Experience';
+import Experience2 from '../components/Experience02';
+// import Experience2 from '../components/Experience2';
+// import ResumePage from '../components/ResumePage';
+// import Resume from '../components/Experience';
 
 const Home = () => {
   return (
@@ -13,7 +18,7 @@ const Home = () => {
               viewBox="0 0 100 100"
               xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="xMidYMid slice"
-              class="w-full h-auto"
+              className="w-full h-auto"
             >
             <defs>
               <clipPath id="slanted-bottom-rounded" clipPathUnits="objectBoundingBox">
@@ -34,7 +39,7 @@ const Home = () => {
             </defs>
             <image
               href={myImage}
-              clip-path="url(#slanted-bottom-rounded)"
+              clipPath="url(#slanted-bottom-rounded)"
               width="100%"
               height="100%"
               preserveAspectRatio="xMidYMid slice"
@@ -63,6 +68,9 @@ const Home = () => {
       </div>
 
       <Work limit={6} />
+      {/* <Experience /> */}
+      <Experience2 />
+
     </div>
   );
 }
