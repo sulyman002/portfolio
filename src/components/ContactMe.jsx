@@ -1,60 +1,275 @@
-import React from 'react'
+import { ArrowRight } from "lucide-react";
+import React, { useEffect, useState, useRef } from "react";
+import gsap from "gsap";
+import emailjs from "@emailjs/browser";
 
 const ContactMe = () => {
+  const [grabAllInput, setGrabAllInput] = useState({
+    name: "",
+    email: "",
+    services: "",
+    description: "",
+  });
+
+  const handleInputsChange = (e) => {
+    const { name, value } = e.target;
+
+    setGrabAllInput((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+  const arrowRef = useRef();
+
+  const tl = useRef(null);
+
+  const handleMouseEnter = () => {
+    tl.current = gsap.timeline({ repeat: -1, yoyo: true });
+    tl.current.to(arrowRef.current, {
+      x: 6,
+      duration: 1,
+      ease: "power1.inOut",
+    });
+  };
+  const handleMouseOut = () => {
+    if (tl.current) {
+      tl.current.kill();
+      gsap.to(arrowRef.current, {
+        x: 0,
+        duration: 0.5,
+        ease: "power1.inOut",
+      });
+    }
+  };
+
+  const [getTime, setGetTime] = useState(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const time = new Date();
+
+      const formatted = time
+        .toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+        })
+        .split("/")
+        .join("-");
+      setGetTime(formatted);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const service_id = "service_ud6atmo";
+    const template_id = "template_ukq3k6c";
+    const public_key = "koca2LZr0Ivgsa47i";
+
+    const templateParams = {
+      from_name: grabAllInput.name,
+      from_email: grabAllInput.email,
+      to_name: "oyedelesulaiman@gmail.com",
+      message: grabAllInput.description,
+      selected_service: grabAllInput.services,
+    };
+
+    emailjs
+      .send(service_id, template_id, templateParams, public_key)
+      .then((resp) => {
+        console.log("Email sent successfully", resp);
+        setGrabAllInput({
+          name: "",
+          email: "",
+          services: "",
+          description: "",
+        });
+      })
+      .catch((error) => {
+        console.error("Error sending email", error);
+      });
+  };
+
   return (
-    <div className="flex flex-col i gap-50 w-full">
-        <div class="w-[600px] mx-auto mt-10 rounded-2xl shadow-lg overflow-hidden bg-white">
+    <div className="w-full bg-[#e5e5e5] mt-40 mb-16 ">
+      {/* <!-- Contact Information --> */}
 
-  <div class="bg-gray-400 h-[36px] flex items-center gap-4 px-3">
-    
-    <div class="flex gap-1.5">
-      <div class="w-2.5 h-2.5 rounded-full bg-red-400"></div>
-      <div class="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
-      <div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2">
+        <div className=" flex items-start gap-10 flex-col justify-between py-10 px-6 md:px-0 ">
+          <div className="relative">
+            <h2 className="text-[#242736] text-[26px] md:text-[26.8px] lg:text-[32px] font-600 font-bold tracking-wider font-['Space_Grotesk']">
+              <span className="block ml-[120px]">A small showcase</span>
+              <span className="block">of what I've worked on.</span>
+            </h2>
+            <p className="absolute top-0 left-0 text-[#ec5c29] text-[16px]">
+              Contact
+            </p>
+          </div>
+
+          {/*  */}
+          <div className="">
+            <div className="text-[16px] text-[#808080]">
+              Local time:
+              <br />
+              <span data-clock="CET" className="text-span text-[#808080] text-[16px] font-bold">
+                {getTime}
+              </span>
+              , CET
+            </div>
+          </div>
+
+          {/*  */}
+        </div>
+
+        <div className="px-10 py-20 bg-[#161616] rounded-lg text-[#ddd]">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {/* <!-- Name and Email --> */}
+            <div className="flex items-center gap-6 md:flex-row flex-col  ">
+              <div className="flex flex-col w-full gap-2">
+                <label
+                  htmlFor="name"
+                  className="text-[#dae1e4] text-[12px] md:text-[14px]"
+                >
+                  Name
+                </label>
+                <input
+                  value={grabAllInput.name}
+                  onChange={handleInputsChange}
+                  className="border active:border-orange-600 outline-none placeholder:text-gray-600 border-[#525252] bg-transparent rounded-[8px] py-3 pl-3 font-200 "
+                  maxLength="256"
+                  name="name"
+                  placeholder="example one"
+                  type="text"
+                  id="name"
+                  required
+                />
+              </div>
+
+              <div className="flex flex-col w-full gap-2">
+                <label
+                  htmlFor="email"
+                  className="text-[#dae1e4] text-[12px] md:text-[14px]"
+                >
+                  E-mail
+                </label>
+                <input
+                  value={grabAllInput.email}
+                  onChange={handleInputsChange}
+                  className="border active:border-orange-600 outline-none border-[#525252] bg-transparent placeholder:text-gray-600 rounded-[8px] py-3 pl-3 font-200 "
+                  maxLength="256"
+                  name="email"
+                  placeholder="example@gmail.com"
+                  type="email"
+                  id="email"
+                  required
+                />
+              </div>
+            </div>
+
+            {/* <!-- Budget and Services --> */}
+            <div className="w-full flex ">
+              <div className="flex flex-col gap-2 w-full">
+                <label
+                  htmlFor="services"
+                  className="text-[#dae1e4] text-[12px] md:text-[14px]"
+                >
+                  Services
+                </label>
+                <select
+                  value={grabAllInput.services}
+                  onChange={handleInputsChange}
+                  id="services"
+                  name="services"
+                  required
+                  className="border active:border-orange-600 placeholder:text-gray-600 outline-none px-6 border-[#525252] bg-transparent rounded-[8px] py-3 pl-3 font-200"
+                >
+                  <option value="" disabled selected>
+                    Select a service
+                  </option>
+                  <option value="Design/ Dev Consulting">
+                    Design / Dev Consulting
+                  </option>
+                  <option value="UI/UX / Product Design">
+                    UI/UX / Product Design
+                  </option>
+                  <option value="Webflow / Framer Development">
+                    Webflow / Framer Development
+                  </option>
+                  <option value="Webflow / Framer Retainer">
+                    Webflow / Framer Retainer
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            {/* <!-- Project Description --> */}
+            <div className="w-full flex flex-col gap-2">
+              <label
+                htmlFor="description"
+                className="text-[14px] text-[#dae1e4] "
+              >
+                Project description
+              </label>
+              <textarea
+                value={grabAllInput.description}
+                onChange={handleInputsChange}
+                id="description"
+                name="description"
+                maxLength="5000"
+                placeholder="Hello sulaiman, can you help me with... my goals and timeline are... and this is what i want..."
+                required
+                className="border h-30 active:border-orange-600 placeholder:text-gray-600 outline-none px-6 border-[#525252] bg-transparent rounded-[8px] py-3 pl-3 font-200"
+              ></textarea>
+            </div>
+
+            {/* <!-- Checkbox --> */}
+            <div className="form-field-wrapper">
+              <label className="flex items-center gap-2">
+                <input
+                  id="checkbox"
+                  type="checkbox"
+                  name="checkbox"
+                  className="scale-120 "
+                  required
+                />
+                <span htmlFor="checkbox" className="text-[#797979] ">
+                  By submitting this form, you agree to the
+                  <a href="/privacy" className="ml-2 text-[#aaaaaa] font-bold ">
+                    Privacy Policy
+                  </a>
+                </span>
+              </label>
+            </div>
+
+            {/* <!-- Submit Button --> */}
+            <div className="flex  items-center justify-between">
+              <button
+                type="submit"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseOut}
+                className="cursor-pointer py-[8px] px-5 flex items-center gap-4 rounded-md font-semibold bg-[#ec5c29] "
+              >
+                send
+                <ArrowRight size={18} ref={arrowRef} />
+              </button>
+
+              <div className="">
+                <p className="text-[14px] text-[#797979] ">
+                  Hate Contact forms?
+                </p>
+                <div className="">
+                  <a href="#" className="text-[#aaaaaa] font-bold text-[14px]">
+                    oyedelesulaiman@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-  
-    <div class="text-xs text-gray-700 font-medium">
-      Extensions List
-    </div>
-    
-  </div>
+  );
+};
 
-
-  <img
-    src="/mnt/data/ds.PNG"
-    alt="Extensions screenshot"
-    class="w-full block"
-  />
-</div>
-
-<div class="max-w-[800px] mx-auto mt-10 bg-white rounded-xl overflow-hidden shadow-xl border border-gray-300">
-
-  <div class="bg-gray-400 h-[38px] flex items-center justify-between px-4">
-   
-    <div class="flex items-center gap-2">
-      <div class="w-3.5 h-3.5 bg-yellow-400 rounded-[2px]"></div>
-      <span class="text-sm text-gray-800 font-medium">Extensions List</span>
-    </div>
-
-
-    <div class="flex items-center gap-2">
-      <div class="w-3 h-[2px] bg-gray-600 rounded-sm"></div>
-      <div class="w-3 h-3 border border-gray-600 rounded-[1px]"></div>
-      <div class="w-3 h-3 bg-red-500 rounded-[1px]"></div>
-    </div>
-  </div>
-
-
-  <img
-    src="/mnt/data/ds.PNG"
-    alt="Extensions screenshot"
-    class="w-full block"
-  />
-</div>
-
-
-    </div>
-  )
-}
-
-export default ContactMe
+export default ContactMe;

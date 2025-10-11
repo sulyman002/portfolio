@@ -58,7 +58,7 @@ const Work = ({limit}) => {
                   H0 
                   Z
                 "
-                fill="#ddd"
+                fill="#F5F5F5"
               />
             </svg>
 
@@ -78,9 +78,7 @@ const Work = ({limit}) => {
 
       <Outlet />
 
-      <div className="w-full bg-red-400 flex items-center justify-center py-2">
-        <button>See More</button>
-      </div>
+      
     </div>
   );
 };
