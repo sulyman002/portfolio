@@ -1,11 +1,13 @@
-import project1 from  "../assets/project1.png";
-import project2 from  "../assets/project2.png";
-import project3 from  "../assets/project3.png";
-import project4 from  "../assets/project4.png";
-import project5 from  "../assets/project5.png";
-import project6 from  "../assets/project6.png";
-import project7 from  "../assets/project7.png";
-import project8 from  "../assets/project8.png";
+import audiophile from "../assets/project/audiophile.png"
+import eCommerce from "../assets/project/e-commerce.png"
+import earthSite from "../assets/project/earth-site.png"
+import extensions from "../assets/project/extensions.png"
+import fylo from "../assets/project/fylo.png"
+import justHome from "../assets/project/just-home.png"
+import navigateWorld from "../assets/project/navigate-world.png"
+import prepWise from "../assets/project/prep-wise.png"
+import pulsepointMiniMarket from "../assets/project/pulsepoint-mini-market.png"
+import tourvisto from "../assets/project/tourvisto.png"
 import html from "../assets/html5.png";
 import javascript from "../assets/javascript.png";
 import css3 from "../assets/css3.png";
@@ -17,6 +19,9 @@ import github from "../assets/github.png"
 import sass from "../assets/sass.png"
 import node from "../assets/node.js.png"
 import transparency from "../assets/transparency.webp"
+import trust from "../assets/trust.jpg"
+import deadline from "../assets/deadline2.jpg"
+
 
 export const core = [
   {id: 1,
@@ -81,37 +86,45 @@ export const links = [
 
 export  const projects = [
   { id: 1,
-    image: project1,
-    name: "project 1"
+    image:eCommerce,
+    name: "e-commerce"
   },
   
   { id: 2,
-    image: project2,
-    name: "project 2"
+    image: pulsepointMiniMarket,
+    name: "pulsepoint-mini-market"
   },
   { id: 3,
-    image: project3,
-    name: "project 3"
+    image: tourvisto,
+    name: "tourvisto"
   },
   { id: 4,
-    image: project4,
-    name: "project 4"
+    image: audiophile,
+    name: "audiophile"
   },
   { id: 5,
-    image: project5,
-    name: "project 5"
+    image: prepWise,
+    name: "prep-wise"
   },
   { id: 6,
-    image: project6,
-    name: "project 6"
+    image: justHome,
+    name: "just home"
   },
   { id: 7,
-    image: project7,
-    name: "project 7"
+    image: fylo,
+    name: "fylo"
   },
   { id: 8,
-    image: project8,
-    name: "project 8"
+    image: navigateWorld,
+    name: "navigate world"
+  },
+  { id: 9,
+    image: earthSite,
+    name: "earth site"
+  },
+  { id: 10,
+    image: extensions,
+    name: "extension"
   },
 
 ]
@@ -141,7 +154,7 @@ export const frontendFAQs = [
 ];
 
 export const essential = [
-  { id: 1, image: transparency, title: "Trust", desc: "I value honesty and clear communication with clients to ensure alignment throughout each project." },
+  { id: 1, image: trust, title: "Trust", desc: "I value honesty and clear communication with clients to ensure alignment throughout each project." },
   { id: 2, image: transparency, title: "Transparency", desc: "Every step of my process is open and easy to follow, keeping expectations realistic and clear." },
-  { id: 3, image: transparency, title: "Deadlines", desc: "I commit to timely delivery without compromising the quality or creativity of the final product." },
+  { id: 3, image: deadline, title: "Deadlines", desc: "I commit to timely delivery without compromising the quality or creativity of the final product." },
 ];

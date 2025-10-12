@@ -11,7 +11,7 @@ const Faq = () => {
           Things i often get asked.
         </h2>
         {/* FAQ */}
-        <div className="flex flex-col justify-center items-center gap-5 w-full ">
+        <div className="flex flex-col mt-10 justify-center items-center gap-5 w-full ">
           {frontendFAQs.map((faq, index) => {
             const isOpen = expanded === index;
             return (

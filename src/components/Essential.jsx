@@ -33,21 +33,19 @@ const Essential = () => {
           <div
             key={index}
             style={{backgroundImage: `url(${item.image})`}}
-            class={`bg-cover bg-center flex items-center justify-center p-6"`}
+            class={`bg-cover bg-center flex items-center rounded-2xl justify-center p-6"`}
           >
             {/* <!-- glass card --> */}
             <div class="grayscale hover:grayscale-0 transition duration-500 w-full max-w-md p-6 rounded-2xl bg-white/20 backdrop-blur-md border border-white/10 shadow-lg drop-shadow-lg">
               <div class="flex items-center gap-4">
-                <div class="w-14 h-14 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center text-xl font-semibold">
-                  <img src={item.img} alt="" className="bg-contain " />
-                </div>
+                
                 <div>
                   <h3 class="text-[#242736] font-bold text-lg">{item.title}</h3>
                   
                 </div>
               </div>
 
-              <p class="mt-4 text-[16px] font-medium text-[#808080]">{item.desc}</p>
+              <p class="mt-4 text-[16px] font-medium text-[#242736]/80">{item.desc}</p>
               <p class="text-[#ec5c29] text-sm mt-4">
                     Frontend Engineer • Pulsepoint Tech
                   </p>

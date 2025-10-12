@@ -11,7 +11,7 @@ const Work = ({limit}) => {
   const productToDisplay = limit ? projects.slice(0, limit) : projects;
 
   return (
-    <div className="mx-auto container">
+    <div className="mx-auto container mt-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div>
           <div className="relative">
