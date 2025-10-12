@@ -99,8 +99,8 @@ const ContactMe = () => {
         <div className=" flex items-start gap-10 flex-col justify-between py-10 px-6 md:px-0 ">
           <div className="relative">
             <h2 className="text-[#242736] text-[26px] md:text-[26.8px] lg:text-[32px] font-600 font-bold tracking-wider font-['Space_Grotesk']">
-              <span className="block ml-[120px]">A small showcase</span>
-              <span className="block">of what I've worked on.</span>
+              <span className="block ml-[120px]">Want to work with me?</span>
+              <span className="block">I'd love to hear from you!</span>
             </h2>
             <p className="absolute top-0 left-0 text-[#ec5c29] text-[16px]">
               Contact

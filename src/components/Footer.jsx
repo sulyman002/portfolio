@@ -18,6 +18,7 @@ const Footer = () => {
             <Link className='hover:text-[#ec5c29]' target='_blank' to="https://www.linkedin.com/in/oyedele-sulaiman-a9a677210?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" >linkedin</Link>
             <Link className='hover:text-[#ec5c29]' target='_blank' to="https://x.com/sulyman002" >twitter</Link>
             <Link className='hover:text-[#ec5c29]' target='_blank' to="https://github.com/sulyman002">github</Link>
+            <Link className='hover:text-[#ec5c29]' target='_blank' to="https://github.com/sulyman002">Whatsapp</Link>
           </ul>
         </nav>
       </div>

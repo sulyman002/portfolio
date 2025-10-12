@@ -3,14 +3,14 @@ import Work from "../components/Work";
 import myImage from "../assets/myImage2.jpg";
 // import Experience from '../components/Experience';
 import Experience2 from "../components/Experience02";
-import Testimonial from "../components/Testimonial";
+
 import { ArrowRight } from "lucide-react";
 import gsap from "gsap";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-// import Experience2 from '../components/Experience2';
-// import ResumePage from '../components/ResumePage';
-// import Resume from '../components/Experience';
+import AboutMe from "../components/AboutMe";
+import Skills from "../components/Skills";
+
 
 const Home = () => {
   const navigate = useNavigate();
@@ -153,9 +153,12 @@ const Home = () => {
           </button>
         </div>
       </div>
-      {/* <Experience /> */}
+      
       <Experience2 />
-      <Testimonial />
+      {/* Skills */}
+      <Skills />
+     
+      <AboutMe />
     </div>
   );
 };
