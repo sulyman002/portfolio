@@ -107,26 +107,26 @@ const ProjectDisplay = () => {
                   <source src={project.video} />
                 </video>
               </div>
-              <div className="flex gap-5 p-5 w-full">
+              <div className="flex gap-5 py-12 px-5 w-full">
                 {/* service column */}
-                <div className="flex flex-col items-start gap- w-1/3">
+                <div className="flex flex-col items-start gap-6 w-1/3">
                   {/* service */}
                   <div className="flex flex-col gap-2">
                     <p className=" text-[#242736] text-[14px] font-semibold">Services</p>
                     {/* render services here */}
-                    <p className="text-[14px] text-[#808080] "></p>
+                    <p className="text-[14px] text-[#808080] ">{project.details.description}</p>
                   </div>
                   {/* duration */}
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-1">
                     <p className="text-[#242736] text-[14px] font-semibold">Duration</p>
                     {/* render duration here */}
-                    <p className="text-[14px] text-[#808080]"></p>
+                    <p className="text-[14px] text-[#808080]">{project.details.duration}</p>
                   </div>
                   {/* live site */}
                   <div className="flex flex-col gap-2">
                     <p className="text-[#242736] text-[14px] font-semibold">Live Site</p>
                     {/* render live site here here */}
-                    <a href="#" className="text-[14px] text-[#808080]"></a>
+                    <a href={project.details.liveSite} className="text-[14px] text-[#808080] hover:text-[#ec5c29]">{project.name}.com</a>
                   </div>
                 </div>
                 {/* About site */}
@@ -136,7 +136,7 @@ const ProjectDisplay = () => {
                     <span>{project.name}</span> Website
                   </p>
                   {/* render body here */}
-                  <div className="text-[16px] text-[#808080]"></div>
+                  <div className="text-[14px] text-[#808080]">{project.details.description}</div>
                 </div>
               </div>
               {/* mobile display */}
