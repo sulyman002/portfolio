@@ -19,13 +19,15 @@ const ProjectDisplay = () => {
     setIsPlaying(false);
   };
 
-  const handleClick = () => {
-    if (isPlaying) {
-      handleMouseLeave();
-    } else {
-      handleMouseEnter();
+  useEffect(() => {
+    if(videoRef.current) {
+      if(window.innerWidth <768) {
+        videoRef.current.play().catch((error) => console.error(error));
+        setIsPlaying(true)
+        
+      }
     }
-  };
+  }, [])
   const navigate = useNavigate();
   const { id } = useParams();
 
@@ -41,7 +43,7 @@ const ProjectDisplay = () => {
 
     return () => {
       document.body.classList.remove("overflow-hidden");
-      window.lenis?.start;
+      window.lenis?.start();
     };
   }, [project]);
 
@@ -52,12 +54,12 @@ const ProjectDisplay = () => {
     <div
       id="overlay"
       // fixed inset-0 bg-black/20 backdrop-blur-[2px] h-screen z-50 flex items-center justify-center
-      class="fixed inset-0 z-50 flex justify-center bg-[#DADFE4] backdrop-blur-[2px] transition-all duration-300 ease-out"
+      className="fixed inset-0 z-50 flex justify-center bg-[#DADFE4] backdrop-blur-[2px] transition-all duration-300 ease-out"
     >
       {/* <!-- Black Container (scrollable) --> */}
       <div
         data-lenis-prevent
-        class="relative bg-black mt-3 md:mx-10 md:mt-10 rounded-2xl min-h-[90vh] w-full flex justify-center items-start overflow-y-auto "
+        className="relative bg-black mt-3 md:mx-10 md:mt-10 rounded-2xl min-h-[90vh] w-full flex justify-center items-start overflow-y-auto "
       >
         {/* <!-- Content Area --> */}
         {/* w-[90%] h-auto md:px-0 md:w-3/4 lg:w-2/4 rounded-2xl shadow-lg  bg-[#ddd] */}
@@ -87,7 +89,7 @@ const ProjectDisplay = () => {
             <div className="flex flex-col">
               {/* preview video */}
               <div
-                onClick={handleClick}
+                
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 className="relative w-full h-[300px] md:h-[500px] lg:h-[600px] overflow-hidden group bg-gray-300"
@@ -99,6 +101,7 @@ const ProjectDisplay = () => {
                 />
                 <video
                   ref={videoRef}
+                  autoPlay={window.innerWidth < 760}
                   muted
                   loop
                   preload="none"
