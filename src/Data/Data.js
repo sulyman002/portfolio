@@ -1,35 +1,42 @@
-import audiophile from "../assets/project/audiophile.png"
-import eCommerce from "../assets/project/e-commerce.png"
-import earthSite from "../assets/project/earth-site.png"
-import extensions from "../assets/project/extensions.png"
-import fylo from "../assets/project/fylo.png"
-import justHome from "../assets/project/just-home.png"
-import navigateWorld from "../assets/project/navigate-world.png"
-import prepWise from "../assets/project/prep-wise.png"
-import pulsepointMiniMarket from "../assets/project/pulsepoint-mini-market.png"
-import tourvisto from "../assets/project/tourvisto.png"
+// === Projects ===
+import audiophile from "../assets/project/audiophile.png";
+import eCommerce from "../assets/project/e-commerce.png";
+import earthSite from "../assets/project/earth-site.png";
+import extensions from "../assets/project/extensions.png";
+import fylo from "../assets/project/fylo.png";
+import justHome from "../assets/project/just-home.png";
+import navigateWorld from "../assets/project/navigate-world.png";
+import prepWise from "../assets/project/prep-wise.png";
+import pulsepointMiniMarket from "../assets/project/pulsepoint-mini-market.png";
+import tourvisto from "../assets/project/tourvisto.png";
+
+// === Tech Stacks / Icons ===
 import html from "../assets/html5.png";
 import javascript from "../assets/javascript.png";
 import css3 from "../assets/css3.png";
 import tailwind from "../assets/tailwind.png";
 import react from "../assets/react.png";
 import typescript from "../assets/typescript.png";
-import redux from "../assets/redux.png"
-import github from "../assets/github.png"
-import sass from "../assets/sass.png"
-import node from "../assets/node.js.png"
-import transparency from "../assets/transparency.webp"
-import trust from "../assets/trust.jpg"
-import deadline from "../assets/deadline2.jpg"
+import redux from "../assets/redux.png";
+import github from "../assets/github.png";
+import sass from "../assets/sass.png";
+import node from "../assets/node.png"; 
 
-import eCommercePreview from "../assets/mobilePreview/eCommerce.png";
-import eCommerceVideo from "../assets/videos(webp)/eCommerceVideo.webm"
-import pulsepointMiniPreview from "../assets/mobilePreview/pulsepointMiniMarket.png" 
-import pulsePointMiniVideo from "../assets/videos(webp)/pulsepoint-mini-market.webm"
+// === Core Values ===
+import transparency from "../assets/transparency.webp";
+import trust from "../assets/trust.jpg";
+import deadline from "../assets/deadline2.jpg";
+
+// === Mobile Previews & Videos ===
+import eCommercePreview from "../assets/mobilePreview/ecommerce.png";
+import eCommerceVideo from "../assets/videos(webp)/eCommerceVideo.webm";
+import pulsepointMiniPreview from "../assets/mobilePreview/pulsepointminimarket.png"; 
+import pulsePointMiniVideo from "../assets/videos(webp)/pulsepoint-mini-market.webm";
 import tourvistoPreview from "../assets/mobilePreview/tourvisto.png";
-import tourvistoVideo from "../assets/videos(webp)/tourvisito.webm";
+import tourvistoVideo from "../assets/videos(webp)/tourvisto.webm";
 import audiophilePreview from "../assets/mobilePreview/audiophile.png";
-import audiophileVideo from "../assets/videos(webp)/audiophile.webm"
+import audiophileVideo from "../assets/videos(webp)/audiophile.webm";
+
 
 export const core = [
   {id: 1,
