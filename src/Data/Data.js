@@ -29,7 +29,7 @@ import deadline from "../assets/deadline2.jpg";
 
 // === Mobile Previews & Videos ===
 import eCommercePreview from "../assets/mobilePreview/ecommerce.png";
-import eCommerceVideo from "../assets/videos(webp)/eCommerceVideo.webm";
+import eCommerceVideo from "../assets/videos(webp)/ecommerceVideo.webm";
 import pulsepointMiniPreview from "../assets/mobilePreview/pulsepointminimarket.png"; 
 import pulsePointMiniVideo from "../assets/videos(webp)/pulsepoint-mini-market.webm";
 import tourvistoPreview from "../assets/mobilePreview/tourvisto.png";
