@@ -114,7 +114,7 @@ const ProjectDisplay = () => {
                   <div className="flex flex-col gap-2">
                     <p className=" text-[#242736] text-[14px] font-semibold">Services</p>
                     {/* render services here */}
-                    <p className="text-[14px] text-[#808080] ">{project.details.description}</p>
+                    <p className="text-[14px] text-[#808080] "></p>
                   </div>
                   {/* duration */}
                   <div className="flex flex-col gap-2">
@@ -136,7 +136,7 @@ const ProjectDisplay = () => {
                     <span>{project.name}</span> Website
                   </p>
                   {/* render body here */}
-                  <div className="text-[16px] text-[#808080]">{project.details.description}</div>
+                  <div className="text-[16px] text-[#808080]"></div>
                 </div>
               </div>
               {/* mobile display */}
