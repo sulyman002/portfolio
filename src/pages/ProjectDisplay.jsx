@@ -148,7 +148,15 @@ const ProjectDisplay = () => {
                 />
               </div>
               {/* features */}
-              <div className=""></div>
+              <div className="flex flex-col gap-5">
+                {/* feature header */}
+                <p className="text-[#242736] text-[18px] font-semibold">Features</p>
+               
+               {/* render list of features here */}
+                <ul>
+                  <li></li>
+                </ul>
+              </div>
               {/* tech Stack */}
               <div className="w-full flex flex-col justify-center items-center py-5">
                 <p className="font-['Space_Grotesk'] font-bold text-[#242736] text-[18px] ">
