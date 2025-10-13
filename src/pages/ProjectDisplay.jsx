@@ -118,25 +118,25 @@ const ProjectDisplay = () => {
                   </div>
                   {/* duration */}
                   <div className="flex flex-col gap-2">
-                    <p className="">Duration</p>
+                    <p className="text-[#242736] text-[14px] font-semibold">Duration</p>
                     {/* render duration here */}
-                    <p className=""></p>
+                    <p className="text-[14px] text-[#808080]"></p>
                   </div>
                   {/* live site */}
                   <div className="flex flex-col gap-2">
-                    <p className="">Live Site</p>
+                    <p className="text-[#242736] text-[14px] font-semibold">Live Site</p>
                     {/* render live site here here */}
-                    <a href="£"></a>
+                    <a href="#" className="text-[14px] text-[#808080]"></a>
                   </div>
                 </div>
                 {/* About site */}
                 <div className="flex-1 flex-col gap-3">
-                  <p className="">
+                  <p className="text-[#242736] text-[18px] font-semibold">
                     {/* render work title here */}
-                    <span></span> Website
+                    <span>{project.name}</span> Website
                   </p>
                   {/* render body here */}
-                  <div className=""></div>
+                  <div className="text-[16px] text-[#808080]">{project.details.description}</div>
                 </div>
               </div>
               {/* mobile display */}

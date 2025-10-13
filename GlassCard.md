@@ -1,4 +1,4 @@
- <div class="min-h-screen bg-[url('/path/to/your-photo.jpg')] bg-cover bg-center flex items-center justify-center p-6">
+ <div class="min-h-screen bg-cover bg-center flex items-center justify-center p-6">
               {/* <!-- glass card --> */}
               <div class="w-full max-w-md p-6 rounded-2xl bg-white/20 backdrop-blur-md border border-white/10 shadow-lg drop-shadow-lg">
                 <div class="flex items-center gap-4">

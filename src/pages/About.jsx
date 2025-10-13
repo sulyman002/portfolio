@@ -1,5 +1,5 @@
 import React from "react";
-import Faq from "../components/FAQ";
+import Faq from "../components/Faq.jsx";
 import Essential from "../components/Essential";
 import myImage from "../assets/myImage2.jpg";
 
