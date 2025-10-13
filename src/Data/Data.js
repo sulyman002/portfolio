@@ -24,7 +24,12 @@ import deadline from "../assets/deadline2.jpg"
 
 import eCommercePreview from "../assets/mobilePreview/eCommerce.png";
 import eCommerceVideo from "../assets/videos(webp)/eCommerceVideo.webm"
-
+import pulsepointMiniPreview from "../assets/mobilePreview/pulsepointMiniMarket.png" 
+import pulsePointMiniVideo from "../assets/videos(webp)/pulsepoint-mini-market.webm"
+import tourvistoPreview from "../assets/mobilePreview/tourvisto.png";
+import tourvistoVideo from "../assets/videos(webp)/tourvisito.webm";
+import audiophilePreview from "../assets/mobilePreview/audiophile.png";
+import audiophileVideo from "../assets/videos(webp)/audiophile.webm"
 
 export const core = [
   {id: 1,
@@ -96,6 +101,7 @@ export  const projects = [
     details: {
       service: "tell us about the service",
       duration: "1 week",
+      liveSite: "https://e-commerce-web-rho-nine.vercel.app/",
       description: "ContractHero brings order to your contract chaos and finally makes digital contract management simple and efficient. I develop their Figma designs into a scalable and modular marketing site full of dedication to detail and engaging animations."
     },
     mobilePreview: eCommercePreview,
@@ -105,17 +111,44 @@ export  const projects = [
   { id: 2,
     image: pulsepointMiniMarket,
     name: "pulsepoint-mini-market",
-    techStack: [ tailwind, react, redux, github ]
+    techStack: [ tailwind, react, redux, github ],
+    video: pulsePointMiniVideo,
+    details: {
+      service: "tell us about the service",
+      duration: "1 week",
+      liveSite: "https://e-commerce-web-rho-nine.vercel.app/",
+      description: "ContractHero brings order to your contract chaos and finally makes digital contract management simple and efficient. I develop their Figma designs into a scalable and modular marketing site full of dedication to detail and engaging animations."
+    },
+    mobilePreview: pulsepointMiniPreview,
+    description: [],
   },
   { id: 3,
     image: tourvisto,
     name: "tourvisto",
-    techStack: [ tailwind, react, redux, github ]
+    techStack: [ tailwind, react, redux, github ],
+    video: tourvistoVideo,
+    details: {
+      service: "tell us about the service",
+      duration: "1 week",
+      liveSite: "https://tourvisto-project-r2sp.vercel.app/",
+      description: "ContractHero brings order to your contract chaos and finally makes digital contract management simple and efficient. I develop their Figma designs into a scalable and modular marketing site full of dedication to detail and engaging animations."
+    },
+    mobilePreview: tourvistoPreview,
+    description: [],
   },
   { id: 4,
     image: audiophile,
     name: "audiophile",
-    techStack: [ tailwind, react, redux, github ]
+    techStack: [ tailwind, react, redux, github ],
+    video: audiophileVideo,
+    details: {
+      service: "tell us about the service",
+      duration: "1 week",
+      liveSite: "https://e-commerce-project-2-b52v.vercel.app/",
+      description: "ContractHero brings order to your contract chaos and finally makes digital contract management simple and efficient. I develop their Figma designs into a scalable and modular marketing site full of dedication to detail and engaging animations."
+    },
+    mobilePreview: audiophilePreview,
+    description: [],
   },
   { id: 5,
     image: prepWise,

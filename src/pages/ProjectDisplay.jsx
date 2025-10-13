@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { projects } from "../Data/Data";
 import { LockKeyhole, X } from "lucide-react";
@@ -7,15 +7,25 @@ import myImage from "../assets/myImage2.jpg";
 
 const ProjectDisplay = () => {
   const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const handleMouseEnter = () => {
     videoRef.current.play();
+    setIsPlaying(true);
   };
 
   const handleMouseLeave = () => {
     videoRef.current.pause();
+    setIsPlaying(false);
   };
 
+  const handleClick = () => {
+    if (isPlaying) {
+      handleMouseLeave();
+    } else {
+      handleMouseEnter();
+    }
+  };
   const navigate = useNavigate();
   const { id } = useParams();
 
@@ -77,9 +87,10 @@ const ProjectDisplay = () => {
             <div className="flex flex-col">
               {/* preview video */}
               <div
+                onClick={handleClick}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                className="relative w-full h-[300px] md:h-[600px] overflow-hidden group bg-gray-300"
+                className="relative w-full h-[300px] md:h-[500px] lg:h-[600px] overflow-hidden group bg-gray-300"
               >
                 <img
                   src={project.image}
@@ -96,14 +107,14 @@ const ProjectDisplay = () => {
                   <source src={project.video} />
                 </video>
               </div>
-              <div className="flex gap-5 p-5">
+              <div className="flex gap-5 p-5 w-full">
                 {/* service column */}
-                <div className="flex flex-col items-start gap-4">
+                <div className="flex flex-col items-start gap- w-1/3">
                   {/* service */}
                   <div className="flex flex-col gap-2">
-                    <p className="">Services</p>
+                    <p className=" text-[#242736] text-[14px] font-semibold">Services</p>
                     {/* render services here */}
-                    <p className=""></p>
+                    <p className="text-[14px] text-[#808080] ">{project.details.description}</p>
                   </div>
                   {/* duration */}
                   <div className="flex flex-col gap-2">
@@ -129,7 +140,13 @@ const ProjectDisplay = () => {
                 </div>
               </div>
               {/* mobile display */}
-              <div className="w-full h-[300px] md:h-[600px]  bg-gray-300"></div>
+              <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] overflow-hidden bg-gray-300">
+                <img
+                  src={project.mobilePreview}
+                  alt="mobile preview"
+                  className="object-cover w-full h-full"
+                />
+              </div>
               {/* features */}
               <div className=""></div>
               {/* tech Stack */}
