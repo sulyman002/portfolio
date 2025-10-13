@@ -1,7 +1,7 @@
 import React from "react";
 import Faq from "../components/Faq.jsx";
 import Essential from "../components/Essential";
-import myImage from "../assets/myImage2.jpg";
+import myImage from "../assets/myImg2.png";
 
 const About = () => {
   return (
@@ -32,7 +32,7 @@ const About = () => {
             my skills and innovations
           </p>
         </div>
-        <div className=" w-[90%] md:w-[600px]">
+        <div className=" w-full ">
           <svg
             viewBox="0 0 100 100"
             xmlns="http://www.w3.org/2000/svg"
