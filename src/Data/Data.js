@@ -22,6 +22,9 @@ import transparency from "../assets/transparency.webp"
 import trust from "../assets/trust.jpg"
 import deadline from "../assets/deadline2.jpg"
 
+import eCommercePreview from "../assets/mobilePreview/eCommerce.png";
+import eCommerceVideo from "../assets/videos(webp)/eCommerceVideo.webm"
+
 
 export const core = [
   {id: 1,
@@ -87,44 +90,63 @@ export const links = [
 export  const projects = [
   { id: 1,
     image:eCommerce,
-    name: "e-commerce"
+    name: "e-commerce",
+    techStack: [ tailwind, react, redux, node, github ],
+    video: eCommerceVideo,
+    details: {
+      service: "tell us about the service",
+      duration: "1 week",
+      description: "ContractHero brings order to your contract chaos and finally makes digital contract management simple and efficient. I develop their Figma designs into a scalable and modular marketing site full of dedication to detail and engaging animations."
+    },
+    mobilePreview: eCommercePreview,
+    description: [],
   },
   
   { id: 2,
     image: pulsepointMiniMarket,
-    name: "pulsepoint-mini-market"
+    name: "pulsepoint-mini-market",
+    techStack: [ tailwind, react, redux, github ]
   },
   { id: 3,
     image: tourvisto,
-    name: "tourvisto"
+    name: "tourvisto",
+    techStack: [ tailwind, react, redux, github ]
   },
   { id: 4,
     image: audiophile,
-    name: "audiophile"
+    name: "audiophile",
+    techStack: [ tailwind, react, redux, github ]
   },
   { id: 5,
     image: prepWise,
-    name: "prep-wise"
+    name: "prep-wise",
+    techStack: [ tailwind, react, github ]
   },
   { id: 6,
     image: justHome,
-    name: "just home"
+    name: "just home",
+    techStack: [ tailwind, react, github ]
   },
   { id: 7,
     image: fylo,
-    name: "fylo"
+    name: "fylo",
+    techStack: [ tailwind, react, github ]
+
   },
   { id: 8,
     image: navigateWorld,
-    name: "navigate world"
+    name: "navigate world",
+    techStack: [ html, css3, javascript, github ]
   },
   { id: 9,
     image: earthSite,
-    name: "earth site"
+    name: "earth site",
+    techStack: [ html, css3, javascript, github ]
   },
   { id: 10,
     image: extensions,
-    name: "extension"
+    name: "extension",
+    techStack: [ html, css3, javascript, github ]
   },
 
 ]

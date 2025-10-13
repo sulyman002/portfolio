@@ -4,7 +4,7 @@ import { projects } from "../Data/Data.js";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 
-const Work = ({limit}) => {
+const Work = ({ limit }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -35,10 +35,12 @@ const Work = ({limit}) => {
         {productToDisplay.map((project, index) => (
           <div
             onClick={() => {
-              navigate(`/work/${project.id}`, {state: { background: location }});
+              navigate(`/work/${project.id}`, {
+                state: { background: location },
+              });
             }}
             key={index}
-            className="relative w-full aspect-[16/9] h hover:scale-101 shadow-md hover:shadow-xl cursor-pointer transition-all duration-700 "
+            className="relative w-full aspect-[16/9] h hover:scale-101 shadow-md hover:shadow-xl cursor-pointer transition-all duration-700 group"
           >
             <svg
               viewBox="0 0 1440 820"
@@ -47,38 +49,74 @@ const Work = ({limit}) => {
             >
               <path
                 d="
-                  M0,70 
-                  Q0,40 30,40 
-                  H380 
-                  Q400,40 420,10 
-                  Q430,0 450,0 
-                  H1410 
-                  Q1440,0 1440,30 
-                  V820 
-                  H0 
-                  Z
-                "
+        M0,70 
+        Q0,40 30,40 
+        H380 
+        Q400,40 420,10 
+        Q430,0 450,0 
+        H1410 
+        Q1440,0 1440,30 
+        V820 
+        H0 
+        Z
+      "
                 fill="#F5F5F5"
               />
             </svg>
 
             <div className="absolute top-[2px] left-0 w-full h-[calc(100%-2px)] overflow-hidden pt-6 lg:pt-7 px-1 pb-1 rounded-md">
               <div className="h-full rounded-md overflow-hidden">
-                <img src={project.image} alt="" className="w-full h-full" />
+                <img
+                  src={project.image}
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 
-            <div className="absolute top-[-5px] left-0 flex items-center text-[12px] gap-4">
+            <div className="absolute top-[-5px] left-0 flex items-center text-[11px] gap-4">
               <LockKeyhole size={12} />
               {project.name}
+            </div>
+
+            {/* 🔹 Hover overlay */}
+            <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center text-white transition-all duration-500">
+              <h3 className="text-lg font-semibold mb-2 capitalize font-['Space_Grotesk']">
+                {project.name}
+              </h3>
+              <p className="text-[14px] ">Tech Stack</p>
+              <div className="flex items-center gap-4 mt-5">
+                {project.techStack.map((stack, index) => (
+                  <div
+                    key={index}
+                    className="cursor-pointer flex gap-3 h-[20px] w-[20px] flex-col items-center justify-center rounded-full p-[2px] bg-white/20 backdrop-blur-md border border-white/10 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:bg-white/30 hover:border-white/30"
+                  >
+                    <img src={stack} alt="tech stack" className="" />
+                  </div>
+                ))}
+              </div>
+
+              {/* button */}
+
+              <div
+                onClick={() => {
+                  navigate(`/work/${project.id}`, {
+                    state: { background: location },
+                  });
+                  scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                className="flex mt-3 items-center rounded-md cursor-pointer  text-white "
+              >
+                <button className="cursor-pointer text-[10px] hover:shadow-lg transition-all hover:scale-101 duration-300 px-5 py-1 font-200 rounded-md bg-[#242736]">
+                  see details
+                </button>
+              </div>
             </div>
           </div>
         ))}
       </div>
 
       <Outlet />
-
-      
     </div>
   );
 };

@@ -3,7 +3,7 @@ import Work from '../components/Work'
 
 const WorkPage = () => {
   return (
-    <div>
+    <div className='px-6 md:px-0'>
       <Work />
     </div>
   )

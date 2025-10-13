@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import { essential } from "../Data/Data";
 
 const Essential = () => {
@@ -28,27 +27,26 @@ const Essential = () => {
 
       {/* RIGHT (scrollable part while pinned) */}
 
-      <div className="flex flex-col md:flex-row items-center gap-6 py-8">
+      <div className="flex flex-col md:flex-row items-center px-6 md:px-0 gap-6 py-8">
         {essential.map((item, index) => (
           <div
             key={index}
-            style={{backgroundImage: `url(${item.image})`}}
             class={`bg-cover bg-center flex items-center rounded-2xl justify-center p-6"`}
           >
             {/* <!-- glass card --> */}
             <div class="grayscale hover:grayscale-0 transition duration-500 w-full max-w-md p-6 rounded-2xl bg-white/20 backdrop-blur-md border border-white/10 shadow-lg drop-shadow-lg">
               <div class="flex items-center gap-4">
-                
                 <div>
                   <h3 class="text-[#242736] font-bold text-lg">{item.title}</h3>
-                  
                 </div>
               </div>
 
-              <p class="mt-4 text-[16px] font-medium text-[#242736]/80">{item.desc}</p>
+              <p class="mt-4 text-[16px] font-medium text-[#242736]/80">
+                {item.desc}
+              </p>
               <p class="text-[#ec5c29] text-sm mt-4">
-                    Frontend Engineer • Pulsepoint Tech
-                  </p>
+                Frontend Engineer • Pulsepoint Tech
+              </p>
             </div>
           </div>
         ))}

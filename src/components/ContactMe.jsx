@@ -112,7 +112,10 @@ const ContactMe = () => {
             <div className="text-[16px] text-[#808080]">
               Local time:
               <br />
-              <span data-clock="CET" className="text-span text-[#808080] text-[16px] font-bold">
+              <span
+                data-clock="CET"
+                className="text-span text-[#808080] text-[16px] font-bold"
+              >
                 {getTime}
               </span>
               , CET
@@ -123,10 +126,10 @@ const ContactMe = () => {
         </div>
 
         <div className="px-10 py-20 bg-[#161616] rounded-lg text-[#ddd]">
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6 w-full">
             {/* <!-- Name and Email --> */}
-            <div className="flex items-center gap-6 md:flex-row flex-col  ">
-              <div className="flex flex-col w-full gap-2">
+            <div className="flex items-center gap-6 lg:flex-row flex-col w-full  ">
+              <div className="flex flex-col flex-1 w-full md:min-w-0 gap-2">
                 <label
                   htmlFor="name"
                   className="text-[#dae1e4] text-[12px] md:text-[14px]"
@@ -137,7 +140,6 @@ const ContactMe = () => {
                   value={grabAllInput.name}
                   onChange={handleInputsChange}
                   className="border active:border-orange-600 outline-none placeholder:text-gray-600 border-[#525252] bg-transparent rounded-[8px] py-3 pl-3 font-200 "
-                  maxLength="256"
                   name="name"
                   placeholder="example one"
                   type="text"
@@ -146,7 +148,7 @@ const ContactMe = () => {
                 />
               </div>
 
-              <div className="flex flex-col w-full gap-2">
+              <div className="flex flex-col flex-1 w-full md:min-w-0 gap-2">
                 <label
                   htmlFor="email"
                   className="text-[#dae1e4] text-[12px] md:text-[14px]"
@@ -157,7 +159,6 @@ const ContactMe = () => {
                   value={grabAllInput.email}
                   onChange={handleInputsChange}
                   className="border active:border-orange-600 outline-none border-[#525252] bg-transparent placeholder:text-gray-600 rounded-[8px] py-3 pl-3 font-200 "
-                  maxLength="256"
                   name="email"
                   placeholder="example@gmail.com"
                   type="email"
@@ -216,7 +217,7 @@ const ContactMe = () => {
                 onChange={handleInputsChange}
                 id="description"
                 name="description"
-                maxLength="5000"
+                
                 placeholder="Hello sulaiman, can you help me with... my goals and timeline are... and this is what i want..."
                 required
                 className="border h-30 active:border-orange-600 placeholder:text-gray-600 outline-none px-6 border-[#525252] bg-transparent rounded-[8px] py-3 pl-3 font-200"
