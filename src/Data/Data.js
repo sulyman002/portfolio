@@ -41,7 +41,7 @@ import prepWiseVideo from "../assets/videos(webp)/prepWise.webm"
 import justHomePreview from "../assets/mobilePreview/justHome.png";
 import justHomeVideo from "../assets/videos(webp)/justHome.webm";
 import fyloPreview from "../assets/mobilePreview/fylo.png";
-import fyloVideo from "../assets/videos(webp)/fylo.png";
+import fyloVideo from "../assets/videos(webp)/fylo.webm";
 import navigateWorldPreview from "../assets/mobilePreview/navigateWorld.png";
 import navigateVideo from "../assets/videos(webp)/navigateWorld.webm";
 import earthSitePreview from "../assets/mobilePreview/earthSite.png";
@@ -173,42 +173,42 @@ export  const projects = [
     image: prepWise,
     name: "prep-wise",
     techStack: [ tailwind, react, github ],
-    video: prepWisePreview,
+    video: prepWiseVideo,
     details: {
       service: "tell us about the service",
       duration: "1 week",
       liveSite: "https://prep-wise-liart.vercel.app/",
       description: "ContractHero brings order to your contract chaos and finally makes digital contract management simple and efficient. I develop their Figma designs into a scalable and modular marketing site full of dedication to detail and engaging animations."
     },
-    mobilePreview: prepWiseVideo,
+    mobilePreview: prepWisePreview,
     description: [],
   },
   { id: 6,
     image: justHome,
     name: "just home",
     techStack: [ tailwind, react, github ],
-    video: justHomePreview,
+    video: justHomeVideo,
     details: {
       service: "tell us about the service",
       duration: "1 week",
       liveSite: "https://prep-wise-liart.vercel.app/",
       description: "ContractHero brings order to your contract chaos and finally makes digital contract management simple and efficient. I develop their Figma designs into a scalable and modular marketing site full of dedication to detail and engaging animations."
     },
-    mobilePreview: justHomeVideo,
+    mobilePreview: justHomePreview,
     description: [],
   },
   { id: 7,
     image: fylo,
     name: "fylo",
     techStack: [ tailwind, react, github ],
-    video: fyloPreview,
+    video: fyloVideo,
     details: {
       service: "tell us about the service",
       duration: "1 week",
       liveSite: "https://landing-page-fylo-pulsepoint.vercel.app/",
       description: "ContractHero brings order to your contract chaos and finally makes digital contract management simple and efficient. I develop their Figma designs into a scalable and modular marketing site full of dedication to detail and engaging animations."
     },
-    mobilePreview: fyloVideo,
+    mobilePreview: fyloPreview,
     description: [],
 
   },
@@ -216,42 +216,42 @@ export  const projects = [
     image: navigateWorld,
     name: "navigate world",
     techStack: [ html, css3, javascript, github ],
-    video: navigateWorldPreview,
+    video: navigateVideo,
     details: {
       service: "tell us about the service",
       duration: "1 week",
       liveSite: "https://landing-page-fylo-pulsepoint.vercel.app/",
       description: "ContractHero brings order to your contract chaos and finally makes digital contract management simple and efficient. I develop their Figma designs into a scalable and modular marketing site full of dedication to detail and engaging animations."
     },
-    mobilePreview: navigateVideo,
+    mobilePreview: navigateWorldPreview,
     description: [],
   },
   { id: 9,
     image: earthSite,
     name: "earth site",
     techStack: [ html, css3, javascript, github ],
-    video: earthSitePreview,
+    video: earthSiteVideo,
     details: {
       service: "tell us about the service",
       duration: "1 week",
       liveSite: "https://landing-page-fylo-pulsepoint.vercel.app/",
       description: "ContractHero brings order to your contract chaos and finally makes digital contract management simple and efficient. I develop their Figma designs into a scalable and modular marketing site full of dedication to detail and engaging animations."
     },
-    mobilePreview: earthSiteVideo,
+    mobilePreview: earthSitePreview,
     description: [],
   },
   { id: 10,
     image: extensions,
     name: "extension",
     techStack: [ html, css3, javascript, github ],
-    video: extensionPreview,
+    video: extensionVideo,
     details: {
       service: "tell us about the service",
       duration: "1 week",
       liveSite: "https://landing-page-fylo-pulsepoint.vercel.app/",
       description: "ContractHero brings order to your contract chaos and finally makes digital contract management simple and efficient. I develop their Figma designs into a scalable and modular marketing site full of dedication to detail and engaging animations."
     },
-    mobilePreview: extensionVideo,
+    mobilePreview: extensionPreview,
     description: [],
   },
 

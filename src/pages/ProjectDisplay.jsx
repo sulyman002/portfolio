@@ -223,9 +223,9 @@ const ProjectDisplay = () => {
 
                   <div class="mt-6 flex gap-3">
                     {/* direct to what up */}
-                    <button class="px-4 py-2 rounded-md bg-[#242736] text-white backdrop-blur-sm border border-white/8 hover:bg-white/16 transition">
+                    <a target="_blank" href="https://wa.me/2348076293177" class="px-4 py-2 rounded-md bg-[#242736] text-white backdrop-blur-sm border border-white/8 hover:bg-white/16 transition">
                       Message
-                    </button>
+                    </a>
                     {/* open email */}
                     <button class="px-4 py-2 rounded-md bg-[#ec5c29] text-white font-semibold shadow-sm hover:scale-[1.02] transition-transform">
                       Hire me
