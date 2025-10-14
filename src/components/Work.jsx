@@ -32,7 +32,7 @@ const Work = ({ limit }) => {
         {
           opacity: 1,
           y: 0,
-          duration: 0.6,
+          duration: 0.8,
           stagger: 0.2,
           scrollTrigger: {
             trigger: containerRef.current,

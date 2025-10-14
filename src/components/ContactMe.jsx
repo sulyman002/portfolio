@@ -188,16 +188,16 @@ const ContactMe = () => {
                   <option value="" disabled selected>
                     Select a service
                   </option>
-                  <option value="Design/ Dev Consulting">
+                  <option value="API / Backend Integration">
                     Web Development /UI Implementation
                   </option>
-                  <option value="UI/UX / Product Design">
+                  <option value="API / Backend Integration">
                     API / Backend Integration
                   </option>
-                  <option value="Webflow / Framer Development">
+                  <option value="Optimizing performance">
                     Optimizing performance
                   </option>
-                  <option value="Webflow / Framer Retainer">
+                  <option value="Consulting / Collaboration">
                     Consulting / Collaboration
                   </option>
                 </select>

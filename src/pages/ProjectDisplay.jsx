@@ -117,7 +117,7 @@ const ProjectDisplay = () => {
                     </p>
                     {/* render services here */}
                     <p className="text-[14px] text-[#808080] ">
-                      {project.details.description}
+                      {project.details.service}
                     </p>
                   </div>
                   {/* duration */}
@@ -138,7 +138,7 @@ const ProjectDisplay = () => {
                     {/* render live site here here */}
                     <a
                       href={project.details.liveSite}
-                      className="text-[14px] text-[#808080] hover:text-[#ec5c29]"
+                      className="text-[14px] text-[#808080] animate-bounce hover:text-[#ec5c29]"
                     >
                       {project.name}.com
                     </a>
@@ -165,15 +165,18 @@ const ProjectDisplay = () => {
                 />
               </div>
               {/* features */}
-              <div className="flex flex-col gap-5">
+              <div className="flex flex-col gap-2 py-6 px-5">
                 {/* feature header */}
-                <p className="text-[#242736] text-[18px] font-semibold">
+                <p className="text-[#242736] text-[16px] font-semibold">
                   Features
                 </p>
 
                 {/* render list of features here */}
-                <ul>
-                  <li></li>
+                <ul className="space-y-2">
+                  {project.description.map((desc, index) => (
+                    <li key={index} className="list-disc list-inside text-[14px] text-[#808080] " >{desc}</li>
+                  ))}
+                  
                 </ul>
               </div>
               {/* tech Stack */}
@@ -227,27 +230,29 @@ const ProjectDisplay = () => {
                       Message
                     </a>
                     {/* open email */}
-                    <button class="px-4 py-2 rounded-md bg-[#ec5c29] text-white font-semibold shadow-sm hover:scale-[1.02] transition-transform">
+                    <a href="#contact" class="px-4 py-2 rounded-md bg-[#ec5c29] text-white font-semibold shadow-sm hover:scale-[1.02] transition-transform">
                       Hire me
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="is-txt-case-contact-bg">Contact</div>
+          
+
 
           <div className="overflow-hidden relative text-[214px] md:text-[320px] w-full text-center pb-4 uppercase font-bold tracking-widest bg-clip-text text-transparent bg-gradient-to-b from-[#2b2a2a] to-black/20">
             contact
-            <Link
-              to="www.gmail.com"
+            <a
+              target="_blank"
+              href="mailto:oyedelesulaiman@gmail.com?subject=Hello&body=Hi, I would like to get in touch with you."
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
                text-red-600 text-[30px] md:text-[50px] tracking-[1px] capitalize font-['Space_Grotesk'] 
                flex items-center justify-center"
             >
               Let's work together
-            </Link>
+            </a>
           </div>
         </div>
       </div>

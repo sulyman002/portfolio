@@ -142,11 +142,10 @@ const Home = () => {
                
                 className="flex items-center rounded-md cursor-pointer  text-[#ec5c29] "
               >
-                <button 
+                <button target="_blank"
                 onClick={() => {
                   const link = document.createElement("a");
-                  link.href = "/oyedele-sulaiman-CV"
-                  link.download = "Oyedele-Sulaiman-CV.pdf";
+                  link.href = "/oyedele-sulaiman-CV.pdf"
                   document.body.appendChild(link);
                   link.click();
                   document.removeChild(link);
