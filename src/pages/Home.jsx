@@ -51,6 +51,21 @@ const Home = () => {
     };
   }, []);
 
+   const handleScrollToSection = (id) => (e) => {
+    e.preventDefault();
+
+    const target = document.getElementById(id);
+
+    if(target && window.lenis) { window.lenis.scrollTo(target, {
+        offset: 0,
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+      })}
+  }
+ 
+
+
+
   return (
     <div className="mx-auto container px-6 md:px-0 flex flex-col ">
       <div className="h-screen">
@@ -108,7 +123,7 @@ const Home = () => {
             </p>
 
             <div className="flex pt-10 space-x-10">
-              <div
+              <a href="#contact" onClick={handleScrollToSection("contact")}
                 ref={buttonRef}
                 className="flex items-center rounded-md cursor-pointer  text-white "
               >
@@ -121,7 +136,7 @@ const Home = () => {
                 >
                   <ArrowRight size={18} className="text-orange-500" />
                 </div>
-              </div>
+              </a>
 
               <div
                

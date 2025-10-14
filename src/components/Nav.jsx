@@ -56,7 +56,17 @@ const handleOpenNav = () => {
   setOpen(!open)
 }
 
+ const handleScrollToSection = (id) => (e) => {
+    e.preventDefault();
 
+    const target = document.getElementById(id);
+
+    if(target && window.lenis) { window.lenis.scrollTo(target, {
+        offset: 0,
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+      })}
+  }
 
   
 
@@ -97,9 +107,9 @@ const handleOpenNav = () => {
            
           </div>
           {/* let's chat */}
-          <div className="z-1 text-[#ec5c29] bg-transparent border border-[#cecece] rounded-[8px] transition-all duration-500 py-[8px] px-[18px] cursor-pointer text-center text-[15.52px] leading-[24px] font-400 font-medium ">
+          <a href='#contact' onClick={handleScrollToSection("contact")} className="z-1 text-[#ec5c29] bg-transparent border border-[#cecece] rounded-[8px] transition-all duration-500 py-[8px] px-[18px] cursor-pointer text-center text-[15.52px] leading-[24px] font-400 font-medium ">
             Let's chat
-          </div>
+          </a>
 
         </div>
         {/* mobile */}

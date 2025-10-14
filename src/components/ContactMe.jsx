@@ -92,7 +92,7 @@ const ContactMe = () => {
   };
 
   return (
-    <section className="w-full bg-[#e5e5e5] mt-40 mb-16 ">
+    <section id="contact" className="w-full bg-[#e5e5e5] mt-40 mb-16 ">
       {/* <!-- Contact Information --> */}
 
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2">
