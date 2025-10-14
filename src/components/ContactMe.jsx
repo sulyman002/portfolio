@@ -141,7 +141,7 @@ const ContactMe = () => {
                   onChange={handleInputsChange}
                   className="border active:border-orange-600 outline-none placeholder:text-gray-600 border-[#525252] bg-transparent rounded-[8px] py-3 pl-3 font-200 "
                   name="name"
-                  placeholder="example one"
+                  placeholder="example"
                   type="text"
                   id="name"
                   required
@@ -189,16 +189,16 @@ const ContactMe = () => {
                     Select a service
                   </option>
                   <option value="Design/ Dev Consulting">
-                    Design / Dev Consulting
+                    Web Development /UI Implementation
                   </option>
                   <option value="UI/UX / Product Design">
-                    UI/UX / Product Design
+                    API / Backend Integration
                   </option>
                   <option value="Webflow / Framer Development">
-                    Webflow / Framer Development
+                    Optimizing performance
                   </option>
                   <option value="Webflow / Framer Retainer">
-                    Webflow / Framer Retainer
+                    Consulting / Collaboration
                   </option>
                 </select>
               </div>

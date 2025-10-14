@@ -1,17 +1,56 @@
 import { LockKeyhole } from "lucide-react";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { projects } from "../Data/Data.js";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Outlet } from "react-router-dom";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Work = ({ limit }) => {
   const navigate = useNavigate();
   const location = useLocation();
+  const containerRef = useRef(null);
 
   const productToDisplay = limit ? projects.slice(0, limit) : projects;
 
+  
+
+  useEffect(() => {
+    const workItems = containerRef.current.querySelectorAll(".work");
+
+    workItems.forEach((item) => {
+      const work = item.querySelectorAll(".animate-work");
+
+      gsap.fromTo(
+        work,
+        {
+          opacity: 0,
+          y: 50,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+    }
+  }, []);
+
   return (
-    <div className="mx-auto container mt-16">
+    <div ref={containerRef} className="mx-auto container mt-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div>
           <div className="relative">
@@ -31,7 +70,7 @@ const Work = ({ limit }) => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-20">
+      <div className="work grid grid-cols-1 md:grid-cols-2 gap-16 mt-20">
         {productToDisplay.map((project, index) => (
           <div
             onClick={() => {
@@ -40,7 +79,7 @@ const Work = ({ limit }) => {
               });
             }}
             key={index}
-            className="relative w-full aspect-[16/9] h hover:scale-101 shadow-md hover:shadow-xl cursor-pointer transition-all duration-700 group"
+            className="animate-work relative w-full aspect-[16/9] h hover:scale-101 shadow-md hover:shadow-xl cursor-pointer transition-all duration-700 group"
           >
             <svg
               viewBox="0 0 1440 820"
@@ -80,7 +119,7 @@ const Work = ({ limit }) => {
             </div>
 
             {/* 🔹 Hover overlay */}
-            <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center text-white transition-all duration-500">
+            <div className="absolute inset-0 bg-black/70 opacity-100 md:opacity-0 md:group-hover:opacity-100 flex flex-col items-center justify-center text-white transition-all duration-500">
               <h3 className="text-lg font-semibold mb-2 capitalize font-['Space_Grotesk']">
                 {project.name}
               </h3>

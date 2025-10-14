@@ -3,13 +3,14 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { words } from '../Data/Data';
 import { links } from '../Data/Data';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const sliderRef = useRef(null);
+  const navigate = useNavigate();
   // const containerRef = useRef(null);
   // const indicatorRef = useRef(null);
   
@@ -65,7 +66,7 @@ const handleOpenNav = () => {
         <div className="flex items-center justify-between ">
         {/* logo here */}
         <div className='flex items-start flex-col gap-[2px]'>
-          <p className="md:text-[17px] text-[14px] font-500 font-semibold text-[#242736] ">Oyedele Sulaiman</p>
+          <p onClick={() => navigate("/")} className="md:text-[17px] text-[14px] font-500 font-semibold text-[#242736] ">Oyedele Sulaiman</p>
          <div
         ref={sliderRef}
         className="overflow-hidden  h-[25px] w-full md:tex-[14px] text-[12px] text-[#A1A09F] flex items-center font-200 relative"

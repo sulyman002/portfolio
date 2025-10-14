@@ -124,13 +124,19 @@ const Home = () => {
               </div>
 
               <div
-                onClick={() => {
-                  navigate("/work");
-                  scrollTo({ top: 0, behavior: "smooth" });
-                }}
+               
                 className="flex items-center rounded-md cursor-pointer  text-[#ec5c29] "
               >
-                <button className="cursor-pointer hover:shadow-lg transition-all hover:scale-101 duration-300 px-6 py-3 font-semibold rounded-md border border-[#808080]">
+                <button 
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = "/oyedele-sulaiman-CV"
+                  link.download = "Oyedele-Sulaiman-CV.pdf";
+                  document.body.appendChild(link);
+                  link.click();
+                  document.removeChild(link);
+                }}
+                className="cursor-pointer hover:shadow-lg transition-all hover:scale-101 duration-300 px-6 py-3 font-semibold rounded-md border border-[#808080]">
                   Download CV
                 </button>
               </div>
@@ -144,7 +150,7 @@ const Home = () => {
         <div
           onClick={() => {
             navigate("/work");
-            scrollTo({ top: 0, behavior: "smooth" });
+            window.lenis?.scrollTo(0, {duration: 1.2})
           }}
           className="flex items-center rounded-md cursor-pointer  text-white "
         >

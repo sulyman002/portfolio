@@ -20,14 +20,13 @@ const ProjectDisplay = () => {
   };
 
   useEffect(() => {
-    if(videoRef.current) {
-      if(window.innerWidth <768) {
+    if (videoRef.current) {
+      if (window.innerWidth < 768) {
         videoRef.current.play().catch((error) => console.error(error));
-        setIsPlaying(true)
-        
+        setIsPlaying(true);
       }
     }
-  }, [])
+  }, []);
   const navigate = useNavigate();
   const { id } = useParams();
 
@@ -89,7 +88,6 @@ const ProjectDisplay = () => {
             <div className="flex flex-col">
               {/* preview video */}
               <div
-                
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 className="relative w-full h-[300px] md:h-[500px] lg:h-[600px] overflow-hidden group bg-gray-300"
@@ -101,7 +99,6 @@ const ProjectDisplay = () => {
                 />
                 <video
                   ref={videoRef}
-                  autoPlay={window.innerWidth < 760}
                   muted
                   loop
                   preload="none"
@@ -115,21 +112,36 @@ const ProjectDisplay = () => {
                 <div className="flex flex-col items-start gap-6 w-1/3">
                   {/* service */}
                   <div className="flex flex-col gap-2">
-                    <p className=" text-[#242736] text-[14px] font-semibold">Services</p>
+                    <p className=" text-[#242736] text-[14px] font-semibold">
+                      Services
+                    </p>
                     {/* render services here */}
-                    <p className="text-[14px] text-[#808080] ">{project.details.description}</p>
+                    <p className="text-[14px] text-[#808080] ">
+                      {project.details.description}
+                    </p>
                   </div>
                   {/* duration */}
                   <div className="flex flex-col gap-1">
-                    <p className="text-[#242736] text-[14px] font-semibold">Duration</p>
+                    <p className="text-[#242736] text-[14px] font-semibold">
+                      Duration
+                    </p>
                     {/* render duration here */}
-                    <p className="text-[14px] text-[#808080]">{project.details.duration}</p>
+                    <p className="text-[14px] text-[#808080]">
+                      {project.details.duration}
+                    </p>
                   </div>
                   {/* live site */}
                   <div className="flex flex-col gap-2">
-                    <p className="text-[#242736] text-[14px] font-semibold">Live Site</p>
+                    <p className="text-[#242736] text-[14px] font-semibold">
+                      Live Site
+                    </p>
                     {/* render live site here here */}
-                    <a href={project.details.liveSite} className="text-[14px] text-[#808080] hover:text-[#ec5c29]">{project.name}.com</a>
+                    <a
+                      href={project.details.liveSite}
+                      className="text-[14px] text-[#808080] hover:text-[#ec5c29]"
+                    >
+                      {project.name}.com
+                    </a>
                   </div>
                 </div>
                 {/* About site */}
@@ -139,7 +151,9 @@ const ProjectDisplay = () => {
                     <span>{project.name}</span> Website
                   </p>
                   {/* render body here */}
-                  <div className="text-[14px] text-[#808080]">{project.details.description}</div>
+                  <div className="text-[14px] text-[#808080]">
+                    {project.details.description}
+                  </div>
                 </div>
               </div>
               {/* mobile display */}
@@ -153,9 +167,11 @@ const ProjectDisplay = () => {
               {/* features */}
               <div className="flex flex-col gap-5">
                 {/* feature header */}
-                <p className="text-[#242736] text-[18px] font-semibold">Features</p>
-               
-               {/* render list of features here */}
+                <p className="text-[#242736] text-[18px] font-semibold">
+                  Features
+                </p>
+
+                {/* render list of features here */}
                 <ul>
                   <li></li>
                 </ul>
