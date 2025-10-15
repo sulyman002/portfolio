@@ -3,16 +3,16 @@ import myImage from "../assets/myImage.jpg"
 
 export const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
+    title: "Frontend Developer",
+    
     icon: myImage,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "March 2025 - April 2025",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Engineered a high-performance web dashboard empowering businesses to manage and secure employer profiles efficiently.",
+      "Built with React, Tailwind CSS, TanStack, and React Hook Form, delivering a responsive and scalable user experience.",
+      "Implemented robust CRUD functionality and optimized client-server data flow for seamless performance.",
+      "Designed a clean, intuitive interface for administrators to organize and update employee data with ease.",
     ],
   },
   {

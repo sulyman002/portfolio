@@ -137,6 +137,7 @@ const ProjectDisplay = () => {
                     </p>
                     {/* render live site here here */}
                     <a
+                    target="_blank"
                       href={project.details.liveSite}
                       className="text-[14px] text-[#808080] animate-bounce hover:text-[#ec5c29]"
                     >

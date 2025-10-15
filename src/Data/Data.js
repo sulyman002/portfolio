@@ -118,7 +118,7 @@ export const projects = [
       service:
         "Easy Online Ordering Smooth checkout process with multiple payment options. Standard, express, or same-day delivery where possible. ",
       duration: "6 days",
-      liveSite: "https://e-commerce-web-rho-nine.vercel.app/",
+      liveSite: "https://pulsepoint-mini-mart.vercel.app/",
       description:
         "I transformed the Figma design of PulsePoint Mini Market into a responsive e-commerce platform for all genders, emphasizing fast performance, modular structure, and engaging animations to create a seamless and visually appealing shopping experience.",
     },
