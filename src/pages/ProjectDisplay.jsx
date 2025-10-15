@@ -48,6 +48,8 @@ const ProjectDisplay = () => {
 
   if (!project) return null;
 
+ 
+
   return (
     // <!-- Overlay Wrapper -->
     <div
@@ -137,7 +139,7 @@ const ProjectDisplay = () => {
                     </p>
                     {/* render live site here here */}
                     <a
-                    target="_blank"
+                      target="_blank"
                       href={project.details.liveSite}
                       className="text-[14px] text-[#808080] animate-bounce hover:text-[#ec5c29]"
                     >
@@ -175,9 +177,13 @@ const ProjectDisplay = () => {
                 {/* render list of features here */}
                 <ul className="space-y-2">
                   {project.description.map((desc, index) => (
-                    <li key={index} className="list-disc list-inside text-[14px] text-[#808080] " >{desc}</li>
+                    <li
+                      key={index}
+                      className="list-disc list-inside text-[14px] text-[#808080] "
+                    >
+                      {desc}
+                    </li>
                   ))}
-                  
                 </ul>
               </div>
               {/* tech Stack */}
@@ -227,11 +233,19 @@ const ProjectDisplay = () => {
 
                   <div class="mt-6 flex gap-3">
                     {/* direct to what up */}
-                    <a target="_blank" href="https://wa.me/2348076293177" class="px-4 py-2 rounded-md bg-[#242736] text-white backdrop-blur-sm border border-white/8 hover:bg-white/16 transition">
+                    <a
+                      target="_blank"
+                      href="https://wa.me/2348076293177"
+                      class="px-4 py-2 rounded-md bg-[#242736] text-white backdrop-blur-sm border border-white/8 hover:bg-white/16 transition"
+                    >
                       Message
                     </a>
                     {/* open email */}
-                    <a href="#contact" class="px-4 py-2 rounded-md bg-[#ec5c29] text-white font-semibold shadow-sm hover:scale-[1.02] transition-transform">
+                    <a
+                       target="_blank"
+                    href="mailto:oyedelesulaiman@gmail.com?subject=Hello&body=Hi, I would like to get in touch with you."
+                      class="px-4 py-2 rounded-md bg-[#ec5c29] text-white font-semibold shadow-sm hover:scale-[1.02] transition-transform"
+                    >
                       Hire me
                     </a>
                   </div>
@@ -239,9 +253,6 @@ const ProjectDisplay = () => {
               </div>
             </div>
           </div>
-
-          
-
 
           <div className="overflow-hidden relative text-[214px] md:text-[320px] w-full text-center pb-4 uppercase font-bold tracking-widest bg-clip-text text-transparent bg-gradient-to-b from-[#2b2a2a] to-black/20">
             contact

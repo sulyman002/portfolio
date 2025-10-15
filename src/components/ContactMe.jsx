@@ -217,7 +217,6 @@ const ContactMe = () => {
                 onChange={handleInputsChange}
                 id="description"
                 name="description"
-                
                 placeholder="Hello sulaiman, can you help me with... my goals and timeline are... and this is what i want..."
                 required
                 className="border h-30 active:border-orange-600 placeholder:text-gray-600 outline-none px-6 border-[#525252] bg-transparent rounded-[8px] py-3 pl-3 font-200"
@@ -260,7 +259,11 @@ const ContactMe = () => {
                   Hate Contact forms?
                 </p>
                 <div className="">
-                  <a href="#" className="text-[#aaaaaa] font-bold text-[14px]">
+                  <a
+                    target="_blank"
+                    href="mailto:oyedelesulaiman@gmail.com?subject=Hello&body=Hi, I would like to get in touch with you."
+                    className="text-[#aaaaaa] font-bold text-[14px]"
+                  >
                     oyedelesulaiman@gmail.com
                   </a>
                 </div>
