@@ -9,6 +9,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
 import MouseDot from "./components/MouseDot";
+import { Toaster } from "sonner";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,6 +42,7 @@ const App = () => {
   return (
     <div className="transition-all">
       <MouseDot />
+      <Toaster />
       <Routes location={background || location}>
         <Route path="/" element={<PortfolioLayout />}>
           <Route index element={<Home />} />

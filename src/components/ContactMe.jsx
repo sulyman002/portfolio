@@ -224,23 +224,7 @@ const ContactMe = () => {
             </div>
 
             {/* <!-- Checkbox --> */}
-            <div className="form-field-wrapper">
-              <label className="flex items-center gap-2">
-                <input
-                  id="checkbox"
-                  type="checkbox"
-                  name="checkbox"
-                  className="scale-120 "
-                  required
-                />
-                <span htmlFor="checkbox" className="text-[#797979] ">
-                  By submitting this form, you agree to the
-                  <a href="/privacy" className="ml-2 text-[#aaaaaa] font-bold ">
-                    Privacy Policy
-                  </a>
-                </span>
-              </label>
-            </div>
+           
 
             {/* <!-- Submit Button --> */}
             <div className="flex  items-center justify-between">
