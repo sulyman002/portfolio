@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import React, { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
 
 const ContactMe = () => {
   const [grabAllInput, setGrabAllInput] = useState({
@@ -79,6 +80,12 @@ const ContactMe = () => {
       .send(service_id, template_id, templateParams, public_key)
       .then((resp) => {
         console.log("Email sent successfully", resp);
+        if (resp) {
+          toast.success(
+            "✅ Thanks for reaching out! Your message has been sent successfully — I'll get back to you soon."
+          );
+        }
+
         setGrabAllInput({
           name: "",
           email: "",
@@ -88,6 +95,9 @@ const ContactMe = () => {
       })
       .catch((error) => {
         console.error("Error sending email", error);
+        if(error) {
+          toast.error("😕 Sorry, your message didn’t go through. Please refresh and try again.")
+        }
       });
   };
 
@@ -224,7 +234,6 @@ const ContactMe = () => {
             </div>
 
             {/* <!-- Checkbox --> */}
-           
 
             {/* <!-- Submit Button --> */}
             <div className="flex  items-center justify-between">
