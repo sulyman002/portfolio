@@ -145,7 +145,7 @@ const Home = () => {
                 <button target="_blank"
                 onClick={() => {
                   const link = document.createElement("a");
-                  link.href = "/oyedele-sulaiman-CV.pdf"
+                  link.href = "/sulaiman-oyedele-(resume).pdf"
                   document.body.appendChild(link);
                   link.click();
                   document.removeChild(link);
