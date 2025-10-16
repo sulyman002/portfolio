@@ -1,7 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useRef } from "react";
 import { experiences } from "../Data/Data";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
 const Experience = () => {
+
+    const cardsRef = useRef([]);
+
+    useEffect(() => {
+        cardsRef.current.forEach((card) => {
+            gsap.fromTo(card, {
+                opacity: 0,
+                y: 100,
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 80%",
+                    end: "top 50%",
+                    scrub: true,
+                }
+            })
+        })
+    }, [])
+
   return (
     <div className="my-16">
       <div className="flex justify-center">
@@ -20,10 +47,11 @@ const Experience = () => {
         {experiences.map((experience, index) => (
           <div
             key={index}
+            ref={(el) => (cardsRef.current[index] = el)}
             className=" border border-[#ec5c29]/70 rounded-[10px] p-7 bg-[#808080]/10 backdrop-blur-md shadow-md"
           >
             {/* section 1 */}
-            <div className="flex flex-col md:flex-row justify-between">
+            <div className="flex flex-col md:flex-row gap-4 justify-between">
               <div className="flex items-start flex-col gap-1 text-[#242736]">
                 <h2 className="text-[22px] font-bold">{experience.title}</h2>
                 <h3 className="text-[18px] font-semibold">
@@ -40,7 +68,7 @@ const Experience = () => {
 
             <div className="py-5">
               {experience.points.map((point, index) => (
-                <ul key={index} className="text-[14px] text-[#808080] ">
+                <ul key={index} className="text-[14px] list-disc ml-5 space-y-2 text-[#808080] ">
                   <li>{point}</li>
                 </ul>
               ))}
