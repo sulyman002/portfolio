@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { IoMdGlobe } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { FaGithub } from "react-icons/fa6";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -151,12 +152,34 @@ const Work = ({ limit }) => {
                 </button>
               </div>
               {/* view live demo and go to github repository */}
-              <div className="absolute bottom-8 flex items-center gap-8  ">
-                <Link to={project.details.liveSite} className="relative hover:scale-102 transition-all duration-300 group/item flex flex-col w-20 items-center">
-                  <div className=""><IoMdGlobe size={20} className=""/></div>
-                  <div className="absolute bottom-[-18px] text-[14px] right-[-10px] hidden group-hover/item:flex duration-500 transition-all text-[#808080] font-bold">Visit live site</div>
+              <div className="absolute bottom-8 flex items-center gap-4">
+                {/* 🌐 Live Site Link */}
+                <Link
+                  target="_blank"
+                  to={project.details.liveSite}
+                  className="relative hover:scale-105 transition-all duration-300 group/item flex flex-col items-center"
+                >
+                  <div className="w-20 flex justify-center">
+                    <IoMdGlobe size={20} />
+                  </div>
+                  <div className="absolute bottom-[-22px] text-[14px] left-1/2 -translate-x-1/2 hidden group-hover/item:flex opacity-0 group-hover/item:opacity-100 transition-all duration-500 text-[#808080] font-bold whitespace-nowrap">
+                    Visit live site
+                  </div>
                 </Link>
-                <div className="">2</div>
+
+                {/* 🧭 GitHub Repo Link */}
+                <Link
+                  target="_blank"
+                  to={project.details.repo}
+                  className="relative hover:scale-105 transition-all duration-300 group/item flex flex-col items-center"
+                >
+                  <div className="w-20 flex justify-center">
+                    <FaGithub size={20} />
+                  </div>
+                  <div className="absolute bottom-[-22px] text-[14px] left-1/2 -translate-x-1/2 hidden group-hover/item:flex opacity-0 group-hover/item:opacity-100 transition-all duration-500 text-[#808080] font-bold whitespace-nowrap">
+                    View code
+                  </div>
+                </Link>
               </div>
             </div>
           </div>

@@ -21,6 +21,7 @@ import redux from "../assets/redux.png";
 import github from "../assets/github.png";
 import sass from "../assets/sass.png";
 import node from "../assets/node.png";
+import tanstack from "../assets/tanstack.svg"
 
 // === Core Values ===
 import transparency from "../assets/transparency.webp";
@@ -138,7 +139,8 @@ export const projects = [
     techStack: [tailwind, react, redux, github],
     video: tourvistoVideo,
     details: {
-      service: "Our travel platform lets users explore destinations, plan trips, and book experiences easily, with guides, location info, and seamless booking and payment options.",
+      service:
+        "Our travel platform lets users explore destinations, plan trips, and book experiences easily, with guides, location info, and seamless booking and payment options.",
       duration: "4 days",
       liveSite: "https://tourvisto-project-r2sp.vercel.app/",
       description:
@@ -152,7 +154,7 @@ export const projects = [
       "Detailed information about attractions, hotels, and restaurants.",
       "Track trips, payments, and favorite destinations.",
       "Fully functional across mobile, tablet, and desktop devices.",
-      "Engaging transitions for a modern user experience."
+      "Engaging transitions for a modern user experience.",
     ],
   },
   {
@@ -162,7 +164,8 @@ export const projects = [
     techStack: [tailwind, react, redux, github],
     video: audiophileVideo,
     details: {
-      service: "Audiophile is an e-commerce platform for audio enthusiasts, offering headphones, speakers, and earphones. Users can explore products, compare features, and make purchases seamlessly with an intuitive interface and smooth browsing experience.",
+      service:
+        "Audiophile is an e-commerce platform for audio enthusiasts, offering headphones, speakers, and earphones. Users can explore products, compare features, and make purchases seamlessly with an intuitive interface and smooth browsing experience.",
       duration: "5 days",
       liveSite: "https://e-commerce-project-2-b52v.vercel.app/",
       description:
@@ -176,8 +179,7 @@ export const projects = [
       "Seamless experience on mobile, tablet, and desktop.",
       "Smooth transitions and hover effects for a modern feel.",
       "Track orders, manage addresses, and view purchase history.",
-      "Save preferred products for future purchase consideration."
-
+      "Save preferred products for future purchase consideration.",
     ],
   },
   {
@@ -187,7 +189,8 @@ export const projects = [
     techStack: [tailwind, react, github],
     video: prepWiseVideo,
     details: {
-      service: "Prep-Wise is a platform that connects job seekers with recruiters. Users can browse companies, view available positions, and schedule interviews directly through the site, simplifying the recruitment process.",
+      service:
+        "Prep-Wise is a platform that connects job seekers with recruiters. Users can browse companies, view available positions, and schedule interviews directly through the site, simplifying the recruitment process.",
       duration: "3 days",
       liveSite: "https://prep-wise-liart.vercel.app/",
       description:
@@ -211,7 +214,8 @@ export const projects = [
     techStack: [tailwind, react, github],
     video: justHomeVideo,
     details: {
-      service: "This static landing page showcases properties, highlighting house views, pricing, and interior features like kitchens, bathrooms, and living spaces. Users can explore each property and understand what each home offers at a glance.",
+      service:
+        "This static landing page showcases properties, highlighting house views, pricing, and interior features like kitchens, bathrooms, and living spaces. Users can explore each property and understand what each home offers at a glance.",
       duration: "2 days",
       liveSite: "https://real-estate-website-4tce.vercel.app/",
       description:
@@ -225,7 +229,7 @@ export const projects = [
       "Fully functional across desktop, tablet, and mobile.",
       "Icons or labels for amenities included in the property.",
       "Easily reach the seller or agent.",
-      "Minimalistic and easy-to-read design for better user experience."
+      "Minimalistic and easy-to-read design for better user experience.",
     ],
   },
   {
@@ -235,7 +239,8 @@ export const projects = [
     techStack: [tailwind, react, github],
     video: fyloVideo,
     details: {
-      service: "Fylo is a cloud storage landing page that showcases file management and secure access features. Users can upload, organize, and access their files from anywhere, making file storage simple and reliable.",
+      service:
+        "Fylo is a cloud storage landing page that showcases file management and secure access features. Users can upload, organize, and access their files from anywhere, making file storage simple and reliable.",
       duration: "1 week",
       liveSite: "https://landing-page-fylo-pulsepoint.vercel.app/",
       description:
@@ -259,7 +264,8 @@ export const projects = [
     techStack: [html, css3, javascript, github],
     video: navigateVideo,
     details: {
-      service: "Navigate the World is an interactive platform that allows users to explore countries by region and view detailed information for each nation. It provides an engaging way to learn about geography, demographics, and cultural insights",
+      service:
+        "Navigate the World is an interactive platform that allows users to explore countries by region and view detailed information for each nation. It provides an engaging way to learn about geography, demographics, and cultural insights",
       duration: "1 week",
       liveSite: "https://rest-countries-api-with-color-theme-six.vercel.app/",
       description:
@@ -283,7 +289,8 @@ export const projects = [
     techStack: [html, css3, javascript, github],
     video: earthSiteVideo,
     details: {
-      service: "Space is an interactive educational site that lets users explore celestial bodies like Earth, the Moon, and other planets. It provides an engaging way to navigate between planets and learn key facts about each one.",
+      service:
+        "Space is an interactive educational site that lets users explore celestial bodies like Earth, the Moon, and other planets. It provides an engaging way to navigate between planets and learn key facts about each one.",
       duration: "2 days",
       liveSite: "https://space-tourism-website-main-pulsepoi.vercel.app/",
       description:
@@ -297,7 +304,7 @@ export const projects = [
       "Display key facts like size, distance, and orbital details.",
       "Focus on visuals and readability.",
       "Engaging interactions for exploration.",
-      "Easy to navigate for all users."
+      "Easy to navigate for all users.",
     ],
   },
   {
@@ -307,7 +314,8 @@ export const projects = [
     techStack: [html, css3, javascript, github],
     video: extensionVideo,
     details: {
-      service: "Extension List is an interactive platform that lets users manage software extensions through toggleable cards. Users can view all extensions and categorize them as active or inactive, making it easy to track and control their tools.",
+      service:
+        "Extension List is an interactive platform that lets users manage software extensions through toggleable cards. Users can view all extensions and categorize them as active or inactive, making it easy to track and control their tools.",
       duration: " 3 days",
       liveSite: "https://extension-pulsepoint.vercel.app/",
       description:
@@ -367,5 +375,45 @@ export const essential = [
     image: deadline,
     title: "Deadlines",
     desc: "I commit to timely delivery without compromising the quality or creativity of the final product.",
+  },
+];
+
+export const experiences = [
+  {
+    title: "Frontend Developer",
+    company_name: "incite360 (crud dashboard)",
+    date: "April 2025 - April 2025",
+    points: [
+      "Engineered a high-performance web dashboard empowering businesses to manage and secure employer profiles efficiently.",
+      "Built with React, Tailwind CSS, TanStack, and React Hook Form, delivering a responsive and scalable user experience.",
+      "Implemented robust CRUD functionality and optimized client-server data flow for seamless performance.",
+      "Designed a clean, intuitive interface for administrators to organize and update employee data with ease.",
+    ],
+    techStack: [ tailwind, react, tanstack ],
+  },
+  {
+    title: "Frontend Developer",
+    company_name: "pulsepoint-mini-mart",
+    date: "May 2025",
+    points: [
+      "Built a responsive e-commerce platform enabling users to browse and order clothing for all genders",
+      "Developed with React, Tailwind CSS, and Redux Toolkit, ensuring fast performance and centralized state management.",
+      "Implemented dynamic product listing, cart management, and order functionality for a smooth shopping experience",
+      "Focused on efficient data handling and server communication, gaining strong insight into managing asynchronous state and API-driven workflows.",
+    ],
+    techStack: [ tailwind, react, redux ],
+  },
+  {
+    title: "Frontend Developer",
+    company_name: "tourvisto",
+    date: "June - June 2025",
+    points: [
+      "Developed a dynamic, responsive travel platform that enables users to plan trips and book destinations seamlessly.",
+      "Translated Figma designs into a functional frontend using React, Tailwind CSS, and Redux Toolkit to ensure scalability and smooth state management.",
+      "Integrated Google Authentication for secure and seamless user sign-in via email.",
+      "Focused on clean architecture, smooth animations, and performance optimization to enhance overall user experience.",
+      "Independently managed the frontend development, emphasizing modular code and intuitive user flow.",
+    ],
+    techStack: [ tailwind, react, redux ],
   },
 ];

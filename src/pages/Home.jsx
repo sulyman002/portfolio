@@ -10,6 +10,7 @@ import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
+import Experience from "../components/Experience";
 
 
 const Home = () => {
@@ -175,6 +176,7 @@ const Home = () => {
       </div>
       
       {/* <Experience2 /> */}
+      <Experience />
       {/* Skills */}
       <Skills />
      
