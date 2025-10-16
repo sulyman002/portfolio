@@ -4,7 +4,7 @@ import Work from '../components/Work'
 const WorkPage = () => {
   return (
     <div className='px-6 md:px-0'>
-      <Work />
+      <Work  limit={6} />
     </div>
   )
 }

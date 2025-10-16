@@ -1,6 +1,6 @@
 import React from "react";
-import Faq from "../components/Faq.jsx";
-import Essential from "../components/Essential";
+// import Faq from "../components/Faq.jsx";
+// import Essential from "../components/Essential";
 import myImage from "../assets/myImg2.png";
 
 const About = () => {
@@ -16,26 +16,18 @@ const About = () => {
             About
           </p>
           <p className="text-[16px] md:text-[18px] text-[#808080] mt-5">
-            I'm Sulaiman Oyedele, also known as Pulsepoint Tech. I’m a Frontend
-            Engineer currently in my penultimate year at the Federal University
-            of Technology, Minna, where I’m pursuing a Bachelor of Technology
-            degree. I’m passionate about exploring technology and building
-            solutions that make processes more efficient. My core expertise lies
-            in JavaScript and TypeScript, and I work extensively with frameworks
-            such as React.js, Next.js, and Node.js. Beyond development, I have a
-            strong interest in automation—if something can be done manually,
-            I’ll always look for a smarter, automated way to achieve it. At the
-            moment, my primary focus is on frontend technologies, where I aim to
-            create seamless, user-friendly, and scalable digital experiences. I
-            believe technology is a powerful tool for solving real-world
-            challenges, and I’m committed to contributing meaningfully through
-            my skills and innovations
+            I’m Sulaiman Oyedele (Pulsepoint Tech), a Frontend Engineer and
+            penultimate-year student at the Federal University of Technology,
+            Minna. I specialize in JavaScript, TypeScript, and frameworks like
+            React.js, Next.js, and Node.js. Passionate about technology and
+            automation, I focus on creating seamless, scalable, and
+            user-friendly digital experiences that solve real-world problems.
           </p>
         </div>
         <div className=" w-full ">
           <svg
             viewBox="0 0 100 100"
-            xmlns="http://www.w3.org/2000/svg"
+            xmlns="http://www.w3.org/2000/svg"    
             preserveAspectRatio="xMidYMid slice"
             className="w-full h-auto"
           >
@@ -70,8 +62,8 @@ const About = () => {
         </div>
       </div>
       {/* about me */}
-      <Essential />
-      <Faq />
+      {/* <Essential /> */}
+      {/* <Faq /> */}
     </div>
   );
 };

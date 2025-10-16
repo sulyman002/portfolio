@@ -109,11 +109,11 @@ const Home = () => {
 
           <div className="">
             <div className="relative">
-              <h2 className="text-[#242736] text-[40px] md:text-[45px] lg:text-[60px] font-600 font-bold tracking-wider font-['Space_Grotesk']">
-                <span className="block ml-[160px]">Frontend Developer</span>
+              <h2 className="text-[#242736] text-[40px] md:text-[45px] xl:text-[60px] font-600 font-bold tracking-wider font-['Space_Grotesk']">
+                <span className="block ml-[160px] md:ml-[0px] xl:ml-[160px]">Frontend Developer</span>
                 <span className="block">& Mobile Developer</span>
               </h2>
-              <p className="absolute top-0 left-0 text-[#ec5c29] text-[14px] animate-bounce">
+              <p className="absolute top-0 md:top-[-10px] xl:top-0 left-0 text-[#ec5c29] text-[14px] animate-bounce">
                 Oyedele Sulaiman
               </p>
             </div>
@@ -159,7 +159,7 @@ const Home = () => {
         </div>
       </div>
 
-      <Work limit={6} />
+      <Work limit={4} />
       <div className="flex w-full justify-center pt-10">
         <div
           onClick={() => {

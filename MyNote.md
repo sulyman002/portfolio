@@ -1,18 +1,20 @@
 import React from 'react'
 
 const ContactMe = () => {
-  return (
+return (
 
     <>
     <a
-  id="projects"
-  tr-ajaxmodal-element="cms-link"
-//   href="/cases/contracthero"
-  class="project_link w-inline-block"
+
+id="projects"
+tr-ajaxmodal-element="cms-link"
+// href="/cases/contracthero"
+class="project_link w-inline-block"
+
 >
+
   <div class="projects_content">
 
-  
     <div class="case-top-wrap">
       <div class="is-url-wrap">
         <div class="projects_heading-wrap">
@@ -50,7 +52,7 @@ const ContactMe = () => {
       </div>
     </div>
 
- 
+
     <div class="visual_wrap">
       <img
         alt=""
@@ -73,6 +75,7 @@ const ContactMe = () => {
 
     </>
       )
+
 }
 
     // <div className="">
@@ -127,12 +130,12 @@ const ContactMe = () => {
     <div class="w-10"></div> 
   </div>
 
-
-  <img
+<img
     src="/mnt/data/ds.PNG"
     alt="Extensions screenshot"
     class="w-full block"
   />
+
 </div>
 
 <div class="max-w-[800px] mx-auto mt-10 bg-white rounded-xl overflow-hidden shadow-xl border border-gray-300">
@@ -144,23 +147,39 @@ const ContactMe = () => {
       <span class="text-sm text-gray-800 font-medium">Extensions List</span>
     </div>
 
-
     <div class="flex items-center gap-2">
       <div class="w-3 h-[2px] bg-gray-600 rounded-sm"></div>
       <div class="w-3 h-3 border border-gray-600 rounded-[1px]"></div>
       <div class="w-3 h-3 bg-red-500 rounded-[1px]"></div>
     </div>
+
   </div>
 
-
-  <img
+<img
     src="/mnt/data/ds.PNG"
     alt="Extensions screenshot"
     class="w-full block"
   />
-</div> */}
 
+</div> */}
 
     // </div>
 
 export default ContactMe
+
+<!-- My full about me -->
+
+<!-- I'm Sulaiman Oyedele, also known as Pulsepoint Tech. I’m a Frontend
+Engineer currently in my penultimate year at the Federal University
+of Technology, Minna, where I’m pursuing a Bachelor of Technology
+degree. I’m passionate about exploring technology and building
+solutions that make processes more efficient. My core expertise lies
+in JavaScript and TypeScript, and I work extensively with frameworks
+such as React.js, Next.js, and Node.js. Beyond development, I have a
+strong interest in automation—if something can be done manually,
+I’ll always look for a smarter, automated way to achieve it. At the
+moment, my primary focus is on frontend technologies, where I aim to
+create seamless, user-friendly, and scalable digital experiences. I
+believe technology is a powerful tool for solving real-world
+challenges, and I’m committed to contributing meaningfully through
+my skills and innovations -->
