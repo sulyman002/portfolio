@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Work from "../components/Work";
 import myImage from "../assets/myImage2.jpg";
 // import Experience from '../components/Experience';
-import Experience2 from "../components/Experience02";
+// import Experience2 from "../components/Experience02";
 
 import { ArrowRight } from "lucide-react";
 import gsap from "gsap";
@@ -174,7 +174,7 @@ const Home = () => {
         </div>
       </div>
       
-      <Experience2 />
+      {/* <Experience2 /> */}
       {/* Skills */}
       <Skills />
      

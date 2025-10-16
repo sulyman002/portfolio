@@ -5,6 +5,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { IoMdGlobe } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,8 +16,6 @@ const Work = ({ limit }) => {
   const containerRef = useRef(null);
 
   const productToDisplay = limit ? projects.slice(0, limit) : projects;
-
-  
 
   useEffect(() => {
     const workItems = containerRef.current.querySelectorAll(".work");
@@ -46,7 +46,7 @@ const Work = ({ limit }) => {
 
     return () => {
       ScrollTrigger.getAll().forEach((t) => t.kill());
-    }
+    };
   }, []);
 
   return (
@@ -149,6 +149,14 @@ const Work = ({ limit }) => {
                 <button className="cursor-pointer text-[10px] hover:shadow-lg transition-all hover:scale-101 duration-300 px-5 py-1 font-200 rounded-md bg-[#242736]">
                   see details
                 </button>
+              </div>
+              {/* view live demo and go to github repository */}
+              <div className="absolute bottom-8 flex items-center gap-8  ">
+                <Link to={project.details.liveSite} className="relative hover:scale-102 transition-all duration-300 group/item flex flex-col w-20 items-center">
+                  <div className=""><IoMdGlobe size={20} className=""/></div>
+                  <div className="absolute bottom-[-18px] text-[14px] right-[-10px] hidden group-hover/item:flex duration-500 transition-all text-[#808080] font-bold">Visit live site</div>
+                </Link>
+                <div className="">2</div>
               </div>
             </div>
           </div>
