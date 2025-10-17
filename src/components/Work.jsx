@@ -152,8 +152,8 @@ const Work = ({ limit }) => {
                 </button>
               </div>
               {/* view live demo and go to github repository */}
-              <div className="absolute bottom-8 flex items-center gap-4">
-                {/* 🌐 Live Site Link */}
+              {/* <div className="absolute bottom-8 flex items-center gap-4">
+                
                 <Link
                   target="_blank"
                   to={project.details.liveSite}
@@ -167,7 +167,7 @@ const Work = ({ limit }) => {
                   </div>
                 </Link>
 
-                {/* 🧭 GitHub Repo Link */}
+               
                 <Link
                   target="_blank"
                   to={project.details.repo}
@@ -180,7 +180,7 @@ const Work = ({ limit }) => {
                     View code
                   </div>
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         ))}
